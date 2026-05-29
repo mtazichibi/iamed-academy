@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IAMED Academy — Centre d'Excellence en IA pour les Professionnels de Santé. Formations en Prompt Engineering médical, sans prérequis technique.">
+  <meta name="keywords" content="IA médicale, prompt engineering, formation médecins, intelligence artificielle santé, IAMED Academy">
+  <meta property="og:title" content="IAMED Academy — IA pour les Professionnels de Santé">
+  <meta property="og:description" content="Maîtrisez l'IA médicale en 3 heures. Cas cliniques réels, attestation de complétion, accès gratuit.">
+  <meta property="og:image" content="assets/logo-banner.png">
+  <meta property="og:type" content="website">
+  <title>IAMED Academy — Centre d'Excellence en IA pour les Professionnels de Santé</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo-seal.png">
+  <link rel="apple-touch-icon" href="assets/logo-seal.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ════════════ NAVBAR ════════════ -->
+<nav class="navbar">
+  <div class="nav-logo" onclick="showPage('home')">
+    <img src="assets/logo-seal.png" alt="IAMED Academy" style="width:36px;height:36px;border-radius:9px;object-fit:cover;flex-shrink:0;">
+    <div class="nav-logo-text">IAMED <span>Academy</span></div>
+  </div>
+  <div class="nav-links">
+    <button class="nav-link active" id="nav-home" onclick="showPage('home')">Accueil</button>
+    <button class="nav-link" id="nav-courses" onclick="showPage('courses')">Cours</button>
+    <button class="nav-link" id="nav-about" onclick="showPage('about')">À propos</button>
+    <button class="nav-link" id="nav-qcm" onclick="showPage('qcm')">📝 QCM</button>
+    <button class="nav-link" id="nav-exercices" onclick="showPage('exercices')">📋 Exercices</button>
+    <button class="nav-link" id="nav-certificat" onclick="showPage('certificat')">🏆 Attestation</button>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost-nav" onclick="showPage('login')">Se connecter</button>
+    <button class="btn-gold-nav" onclick="showPage('signup')">S'inscrire gratuitement</button>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════
+     PAGE : HOME
+════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div style="margin-bottom:1.5rem;">
+          <img src="assets/logo-banner.png" alt="IAMED Academy" style="width:110px;height:110px;object-fit:contain;filter:drop-shadow(0 4px 16px rgba(196,154,60,.3));">
+        </div>
+        <div class="hero-kicker">
+          <div class="hero-kicker-dot"></div>
+          Nouvelle plateforme · Édition 2025–2026
+        </div>
+        <h1 class="hero-title">
+          L'IA médicale,<br>
+          <em>enfin enseignée</em><br>
+          aux <span class="line-accent">soignants</span>
+        </h1>
+        <p class="hero-sub">
+          IAMED Academy forme les médecins, internes et paramédicaux aux outils d'intelligence artificielle — avec des cas cliniques réels, sans prérequis technique.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="showPage('courses')">
+            Découvrir les cours
+            <span>→</span>
+          </button>
+          <button class="btn-outline" onclick="showPage('signup')">
+            Accès institutionnel
+          </button>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-item">Gratuit ou mode audit</span>
+          <span class="trust-sep"></span>
+          <span class="trust-item">Cas cliniques réels</span>
+          <span class="trust-sep"></span>
+          <span class="trust-item">Attestation de complétion</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- Card 1 : Prompt box -->
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-card-icon" style="background:rgba(196,154,60,.15);">🧠</div>
+            <div>
+              <div class="hero-card-title">Prompt Engineering</div>
+              <div class="hero-card-sub">Médecins débutants · Bloc 2</div>
+            </div>
+            <div class="hero-card-badge" style="background:rgba(34,197,94,.15);color:#6CE67C;">En cours</div>
+          </div>
+          <div class="hero-card-body"><span class="mono-gold">Tu es un interniste expert.</span>
+Génère les <span class="mono-blue">8 diagnostics différentiels</span>
+classés par probabilité, avec pour
+chacun 2 arguments en faveur et
+<span class="mono-green">1 argument contre.</span></div>
+        </div>
+
+        <!-- Card 2 : Progress -->
+        <div class="hero-card" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div>
+            <div style="font-size:11px;color:rgba(255,255,255,.4);margin-bottom:4px;">PROGRESSION</div>
+            <div style="font-size:24px;font-weight:700;color:#fff;font-family:var(--font-display);">68<span style="color:var(--gold-lt);font-size:16px;">%</span></div>
+            <div style="font-size:11px;color:rgba(255,255,255,.4);">Bloc 2 / 4 blocs</div>
+            <div style="margin-top:8px;height:4px;background:rgba(255,255,255,.1);border-radius:4px;overflow:hidden;">
+              <div style="width:68%;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-lt));border-radius:4px;"></div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="font-size:11px;color:rgba(255,255,255,.4);margin-bottom:2px;">EXERCICES</div>
+            <div style="font-size:12px;color:#6CE67C;">✓ Diag. de vitesse</div>
+            <div style="font-size:12px;color:#6CE67C;">✓ Test des sources</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.5);">→ Anti-sycophancy</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.25);">○ Cas intégrateur</div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">3<span>+</span></div>
+            <div class="hero-stat-label">cours disponibles</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">12<span>h</span></div>
+            <div class="hero-stat-label">de contenu</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">100<span>%</span></div>
+            <div class="hero-stat-label">cas médicaux</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <div style="background:var(--white);border-bottom:1px solid var(--rule);">
+    <div class="section section-sm" style="padding-top:3.5rem;padding-bottom:3.5rem;">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <div class="section-kicker mx-auto" style="justify-content:center;">Comment ça marche</div>
+        <h2 class="section-title" style="font-size:clamp(22px,2.5vw,32px);">De l'inscription à l'attestation<br>en <em>4 étapes simples</em></h2>
+      </div>
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="how-num">1</div>
+          <div class="how-title">Créez votre compte</div>
+          <div class="how-desc">Inscription gratuite avec votre email institutionnel ou un code d'accès fourni par votre hôpital.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-num">2</div>
+          <div class="how-title">Choisissez un cours</div>
+          <div class="how-desc">Accédez au catalogue et sélectionnez la formation adaptée à votre niveau et spécialité.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-num">3</div>
+          <div class="how-title">Pratiquez en direct</div>
+          <div class="how-desc">Chaque module alterne présentation, démonstration clinique et atelier pratique sur cas réels.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-num">4</div>
+          <div class="how-title">Obtenez l'attestation</div>
+          <div class="how-desc">QCM + exercice pratique noté. Attestation de complétion téléchargeable immédiatement.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COURSES PREVIEW -->
+  <div style="background:var(--cream);">
+    <div class="section">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+        <div>
+          <div class="section-kicker">Catalogue</div>
+          <h2 class="section-title" style="margin-bottom:0;">Nos cours disponibles</h2>
+        </div>
+        <button class="btn-outline" style="color:var(--navy);border-color:var(--rule);background:var(--white);padding:.6rem 1.25rem;border-radius:var(--radius-full);font-size:14px;font-weight:500;transition:all .15s;" onclick="showPage('courses')">Voir tout le catalogue →</button>
+      </div>
+
+      <div class="courses-grid">
+
+        <!-- COURSE 1 — Prompt Engineering (available) -->
+        <div class="course-card fade-up" onclick="showPage('course-detail')">
+          <div class="course-thumb">
+            <div class="course-thumb-bg" style="background:linear-gradient(135deg,#0B1F35 0%,#1A3A58 60%,#0E8A6B 100%);">
+              <div class="course-thumb-icon">🧠</div>
+            </div>
+            <div class="course-thumb-content">
+              <div class="course-badges">
+                <span class="badge badge-new">Nouveau</span>
+                <span class="badge badge-white">Débutant</span>
+              </div>
+              <div class="course-thumb-title">Prompt Engineering<br>pour Médecins</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-meta-item">🕐 3–4 heures</span>
+              <span class="course-meta-item">📋 4 blocs</span>
+              <span class="course-meta-item">🏥 Hôpital univ.</span>
+            </div>
+            <div class="course-desc">Maîtrisez les trois modes d'interrogation de l'IA, le cadre PACTE, l'anti-sycophancy et créez vos premiers outils médicaux sans programmer.</div>
+            <div class="course-footer">
+              <div class="course-price"><span class="price-free">✓ Gratuit</span></div>
+              <button class="btn-card btn-card-primary">Commencer →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- COURSE 2 — Radiology (coming soon) -->
+        <div class="course-card fade-up" style="opacity:.75;">
+          <div class="course-thumb">
+            <div class="course-thumb-bg" style="background:linear-gradient(135deg,#1A0B35 0%,#3A1A58 60%,#8A0E6B 100%);">
+              <div class="course-thumb-icon">🩻</div>
+            </div>
+            <div class="course-thumb-content">
+              <div class="course-badges">
+                <span class="badge badge-soon">Bientôt</span>
+                <span class="badge badge-white">Intermédiaire</span>
+              </div>
+              <div class="course-thumb-title">IA en Imagerie<br>Médicale</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-meta-item">🕐 4–5 heures</span>
+              <span class="course-meta-item">📋 3 modules</span>
+              <span class="course-meta-item">🩺 Radiologues</span>
+            </div>
+            <div class="course-desc">Analyse d'images médicales par IA, prompt de description structuré, intégration dans le flux PACS, limites réglementaires et cas pratiques.</div>
+            <div class="course-footer">
+              <div class="course-price">Disponible T2 2026</div>
+              <button class="btn-card btn-card-disabled" disabled>Bientôt</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- COURSE 3 — Clinical Research (coming soon) -->
+        <div class="course-card fade-up" style="opacity:.75;">
+          <div class="course-thumb">
+            <div class="course-thumb-bg" style="background:linear-gradient(135deg,#0B2A1A 0%,#1A5835 60%,#0E8A4A 100%);">
+              <div class="course-thumb-icon">📊</div>
+            </div>
+            <div class="course-thumb-content">
+              <div class="course-badges">
+                <span class="badge badge-soon">Bientôt</span>
+                <span class="badge badge-white">Avancé</span>
+              </div>
+              <div class="course-thumb-title">IA &amp; Recherche<br>Clinique</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-meta-item">🕐 6 heures</span>
+              <span class="course-meta-item">📋 5 modules</span>
+              <span class="course-meta-item">🔬 Chercheurs</span>
+            </div>
+            <div class="course-desc">Revues de littérature semi-automatisées, extraction de données, rédaction d'articles assistée, analyse de cohortes avec l'IA et éthique de la publication.</div>
+            <div class="course-footer">
+              <div class="course-price">Disponible T3 2026</div>
+              <button class="btn-card btn-card-disabled" disabled>Bientôt</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div style="background:var(--white);">
+    <div class="section">
+      <div class="text-center" style="margin-bottom:3rem;">
+        <div class="section-kicker mx-auto" style="justify-content:center;">Pourquoi IAMED Academy</div>
+        <h2 class="section-title">Une pédagogie pensée<br>pour les <em>cliniciens</em></h2>
+        <p class="section-sub mx-auto" style="text-align:center;margin-bottom:0;">Aucun prérequis en informatique. Chaque exercice est ancré dans une situation clinique réelle.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-up">
+          <div class="feature-icon" style="background:var(--blue-lt);">🏥</div>
+          <div class="feature-title">100 % cas médicaux</div>
+          <div class="feature-desc">Chaque prompt, chaque exercice, chaque démonstration utilise des scénarios cliniques réalistes — diagnostics différentiels, prescriptions complexes, comptes-rendus d'hospitalisation.</div>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon" style="background:var(--teal-lt);">⚡</div>
+          <div class="feature-title">Format 20 min + 40 min</div>
+          <div class="feature-desc">Chaque bloc alterne 20 min de présentation avec démonstration en direct et 40 min d'atelier pratique guidé. Conçu pour s'intégrer à une journée de formation continue.</div>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon" style="background:var(--gold-pale);">🛡️</div>
+          <div class="feature-title">Éthique &amp; sécurité intégrées</div>
+          <div class="feature-desc">Chaque cours inclut les règles RGPD, les limites réglementaires des LLM et les bonnes pratiques d'anonymisation. L'IA en médecine s'apprend avec rigueur.</div>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon" style="background:var(--rose-lt);">📚</div>
+          <div class="feature-title">Sources open access uniquement</div>
+          <div class="feature-desc">Toutes les ressources recommandées sont gratuites ou disponibles en mode audit — articles PMC, cours Coursera, documentation officielle Anthropic.</div>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon" style="background:var(--green-lt);">🎓</div>
+          <div class="feature-title">Attestation vérifiable</div>
+          <div class="feature-desc">Évaluation par QCM + exercice pratique noté. Attestation de complétion téléchargeable, nominative et horodatée — compatible avec les exigences de formation continue.</div>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon" style="background:var(--amber-lt);">🔄</div>
+          <div class="feature-title">Contenu mis à jour en continu</div>
+          <div class="feature-desc">Les guidelines médicales évoluent, l'IA évolue. Les cours IAMED sont revus à chaque nouvelle recommandation majeure des sociétés savantes (ESC, HAS, ADA, KDIGO).</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div style="background:var(--cream);">
+    <div class="section">
+      <div class="text-center" style="margin-bottom:3rem;">
+        <div class="section-kicker mx-auto" style="justify-content:center;">Témoignages</div>
+        <h2 class="section-title">Ce que disent les médecins<br>après la <em>formation</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"J'avais peur que ce soit trop technique. Au final, j'ai créé mon calculateur CHA₂DS₂-VASc en 8 minutes, sans écrire une ligne de code. Le format 20 min + 40 min est parfait pour nos journées chargées."</div>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#0B1F35,#1A3A58);">SM</div>
+            <div>
+              <div class="author-name">Dr Sophie M.</div>
+              <div class="author-role">Cardiologue — CHU de Lyon</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"L'exercice sur la sycophancy m'a ouvert les yeux. Je ne savais pas que l'IA pouvait valider un mauvais diagnostic aussi facilement. Les prompts anti-sycophancy font maintenant partie de ma pratique quotidienne."</div>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#72243E,#D4537E);">TK</div>
+            <div>
+              <div class="author-name">Dr Tarek K.</div>
+              <div class="author-role">Interniste — Hôpital universitaire</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text">"Le module deep research m'a permis de préparer une RCP complexe BPCO+IC+FA en 20 minutes au lieu de 2 heures. Les interactions médicamenteuses croisées étaient toutes identifiées avec les sources."</div>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#085041,#1D9E75);">NB</div>
+            <div>
+              <div class="author-name">Dr Nadia B.</div>
+              <div class="author-role">Pneumologue — Centre hospitalier</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <div class="cta-bg"></div>
+    <div class="cta-inner">
+      <div style="margin-bottom:1.25rem;">
+        <img src="assets/logo-banner.png" alt="IAMED Academy" style="width:80px;height:80px;object-fit:contain;filter:drop-shadow(0 2px 16px rgba(196,154,60,.3));">
+      </div>
+      <div class="hero-kicker" style="justify-content:center;display:inline-flex;margin-bottom:1.25rem;">
+        <div class="hero-kicker-dot"></div>
+        Inscription ouverte
+      </div>
+      <h2 class="cta-title">Commencez votre première<br>formation <em>aujourd'hui</em></h2>
+      <p class="cta-sub">Accès gratuit au cours Prompt Engineering pour Médecins. Aucun prérequis technique. Attestation de complétion incluse.</p>
+      <div class="cta-actions">
+        <button class="btn-primary" style="font-size:16px;padding:1rem 2.25rem;" onclick="showPage('signup')">
+          Créer mon compte gratuit →
+        </button>
+        <button class="btn-outline" onclick="showPage('login')">
+          J'ai déjà un compte
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="nav-logo" style="margin-bottom:.75rem;">
+            <img src="assets/logo-seal.png" alt="IAMED Academy" style="width:36px;height:36px;border-radius:9px;object-fit:cover;flex-shrink:0;">
+            <div class="nav-logo-text">IAMED <span>Academy</span></div>
+          </div>
+          <p class="footer-brand-desc">La première plateforme de formation aux outils d'intelligence artificielle conçue exclusivement pour les professionnels de santé. Cas cliniques réels, aucun prérequis technique.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Cours</div>
+          <ul class="footer-links">
+            <li><span onclick="showPage('courses')">Prompt Engineering — Médecins</span></li>
+            <li><span>IA en Imagerie Médicale (bientôt)</span></li>
+            <li><span>IA &amp; Recherche Clinique (bientôt)</span></li>
+            <li><span>Niveau Avancé (bientôt)</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Plateforme</div>
+          <ul class="footer-links">
+            <li><span onclick="showPage('about')">À propos d'IAMED</span></li>
+            <li><span>Accès institutionnel</span></li>
+            <li><span>Attestations</span></li>
+            <li><span>FAQ</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Ressources</div>
+          <ul class="footer-links">
+            <li><a href="https://docs.claude.com" target="_blank">Documentation Anthropic</a></li>
+            <li><a href="https://www.ncbi.nlm.nih.gov/pmc/" target="_blank">PubMed Central</a></li>
+            <li><a href="https://www.coursera.org" target="_blank">Coursera (audit gratuit)</a></li>
+            <li><a href="https://www.deeplearning.ai" target="_blank">DeepLearning.AI</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2025–2026 IAMED Academy. Formation médicale continue.</div>
+        <div class="footer-bottom-links">
+          <span>Mentions légales</span>
+          <span>Confidentialité</span>
+          <span>RGPD</span>
+          <span>Contact</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /page-home -->
+
+
+<!-- ════════════════════════════════════
+     PAGE : COURSES
+════════════════════════════════════ -->
+<div class="page" id="page-courses">
+
+  <div class="courses-page-header">
+    <div class="courses-page-header-bg"></div>
+    <div class="courses-page-header-inner">
+      <div class="hero-kicker" style="display:inline-flex;justify-content:center;margin-bottom:1rem;">
+        <div class="hero-kicker-dot"></div>
+        Catalogue 2025–2026
+      </div>
+      <h1 class="courses-page-title">Toutes nos formations</h1>
+      <p class="courses-page-sub">Des cours conçus pour la pratique médicale réelle — de l'interne au médecin senior, aucun prérequis technique requis.</p>
+    </div>
+  </div>
+
+  <div class="courses-filter-bar">
+    <button class="filter-tab active" onclick="setFilter(this)">Tous les cours</button>
+    <button class="filter-tab" onclick="setFilter(this)">Débutant</button>
+    <button class="filter-tab" onclick="setFilter(this)">Intermédiaire</button>
+    <button class="filter-tab" onclick="setFilter(this)">Avancé</button>
+    <button class="filter-tab" onclick="setFilter(this)">Gratuit</button>
+    <button class="filter-tab" onclick="setFilter(this)">Disponibles</button>
+  </div>
+
+  <div class="courses-page-grid">
+
+    <!-- COURSE 1 — AVAILABLE -->
+    <div class="course-card" onclick="showPage('signup')">
+      <div class="course-thumb">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg,#0B1F35 0%,#1A3A58 60%,#0E8A6B 100%);">
+          <div class="course-thumb-icon">🧠</div>
+        </div>
+        <div class="course-thumb-content">
+          <div class="course-badges">
+            <span class="badge badge-new">Nouveau</span>
+            <span class="badge badge-white">Débutant</span>
+          </div>
+          <div class="course-thumb-title">Prompt Engineering<br>pour Médecins</div>
+        </div>
+      </div>
+      <div class="course-body">
+        <div class="course-meta">
+          <span class="course-meta-item">🕐 3–4 heures</span>
+          <span class="course-meta-item">📋 4 blocs</span>
+        </div>
+        <div class="course-desc">Maîtrisez les trois modes d'interrogation (connaissance intégrée, web search, deep research), le cadre PACTE, l'anti-sycophancy et créez vos premiers outils cliniques sans programmer.</div>
+        <div style="margin-bottom:.75rem;">
+          <div style="font-size:11px;font-weight:600;color:var(--ink-lt);margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em;">Ce que vous apprendrez</div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="font-size:12.5px;color:var(--ink-md);display:flex;align-items:center;gap:6px;"><span style="color:var(--teal);">✓</span> Grille feux tricolores pour évaluer les sources</div>
+            <div style="font-size:12.5px;color:var(--ink-md);display:flex;align-items:center;gap:6px;"><span style="color:var(--teal);">✓</span> Prompts anti-sycophancy cliniques</div>
+            <div style="font-size:12.5px;color:var(--ink-md);display:flex;align-items:center;gap:6px;"><span style="color:var(--teal);">✓</span> Calculateur de score CHA₂DS₂-VASc en 8 min</div>
+          </div>
+        </div>
+        <div class="course-footer">
+          <div class="course-price"><span class="price-free">✓ Accès gratuit</span></div>
+          <button class="btn-card btn-card-primary" onclick="event.stopPropagation();showPage('course-detail')">Commencer →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- COURSE 2 — Collégiens (available) -->
+    <div class="course-card" onclick="showPage('signup')">
+      <div class="course-thumb">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg,#1A2B0B 0%,#3A5818 60%,#8A6B0E 100%);">
+          <div class="course-thumb-icon">🎓</div>
+        </div>
+        <div class="course-thumb-content">
+          <div class="course-badges">
+            <span class="badge badge-new">Nouveau</span>
+            <span class="badge badge-white">Tous niveaux</span>
+          </div>
+          <div class="course-thumb-title">IA pour Paramédicaux<br>&amp; Étudiants</div>
+        </div>
+      </div>
+      <div class="course-body">
+        <div class="course-meta">
+          <span class="course-meta-item">🕐 2–3 heures</span>
+          <span class="course-meta-item">📋 3 modules</span>
+        </div>
+        <div class="course-desc">Une version adaptée du cours Prompt Engineering pour les étudiants en médecine, infirmiers, kinésithérapeutes et autres professionnels de santé en formation.</div>
+        <div style="margin-bottom:.75rem;">
+          <div style="font-size:11px;font-weight:600;color:var(--ink-lt);margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em;">Ce que vous apprendrez</div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="font-size:12.5px;color:var(--ink-md);display:flex;align-items:center;gap:6px;"><span style="color:var(--teal);">✓</span> Poser les bonnes questions à l'IA</div>
+            <div style="font-size:12.5px;color:var(--ink-md);display:flex;align-items:center;gap:6px;"><span style="color:var(--teal);">✓</span> Vérifier une source médicale</div>
+            <div style="font-size:12.5px;color:var(--ink-md);display:flex;align-items:center;gap:6px;"><span style="color:var(--teal);">✓</span> Créer un quiz de révision interactif</div>
+          </div>
+        </div>
+        <div class="course-footer">
+          <div class="course-price"><span class="price-free">✓ Accès gratuit</span></div>
+          <button class="btn-card btn-card-primary" onclick="event.stopPropagation();showPage('course-detail')">Commencer →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- COURSE 3 — Imagerie -->
+    <div class="course-card" style="opacity:.75;">
+      <div class="course-thumb">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg,#1A0B35 0%,#3A1A58 60%,#8A0E6B 100%);">
+          <div class="course-thumb-icon">🩻</div>
+        </div>
+        <div class="course-thumb-content">
+          <div class="course-badges">
+            <span class="badge badge-soon">Bientôt</span>
+            <span class="badge badge-white">Intermédiaire</span>
+          </div>
+          <div class="course-thumb-title">IA en Imagerie<br>Médicale</div>
+        </div>
+      </div>
+      <div class="course-body">
+        <div class="course-meta">
+          <span class="course-meta-item">🕐 4–5 heures</span>
+          <span class="course-meta-item">🩺 Radiologues</span>
+        </div>
+        <div class="course-desc">Analyse d'images médicales par IA, prompt de description structuré pour scanner/IRM/RX, intégration dans le flux PACS et limites réglementaires.</div>
+        <div class="course-footer">
+          <div class="course-price">Disponible T2 2026</div>
+          <button class="btn-card btn-card-disabled" disabled>Bientôt</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- COURSE 4 — Recherche -->
+    <div class="course-card" style="opacity:.75;">
+      <div class="course-thumb">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg,#0B2A1A 0%,#1A5835 60%,#0E8A4A 100%);">
+          <div class="course-thumb-icon">📊</div>
+        </div>
+        <div class="course-thumb-content">
+          <div class="course-badges">
+            <span class="badge badge-soon">Bientôt</span>
+            <span class="badge badge-white">Avancé</span>
+          </div>
+          <div class="course-thumb-title">IA &amp; Recherche<br>Clinique</div>
+        </div>
+      </div>
+      <div class="course-body">
+        <div class="course-meta">
+          <span class="course-meta-item">🕐 6 heures</span>
+          <span class="course-meta-item">🔬 Chercheurs</span>
+        </div>
+        <div class="course-desc">Revues de littérature semi-automatisées, extraction de données, rédaction d'articles assistée, analyse de cohortes et éthique de la publication.</div>
+        <div class="course-footer">
+          <div class="course-price">Disponible T3 2026</div>
+          <button class="btn-card btn-card-disabled" disabled>Bientôt</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- COURSE 5 — Urgences -->
+    <div class="course-card" style="opacity:.75;">
+      <div class="course-thumb">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg,#350B0B 0%,#581A1A 60%,#8A3A0E 100%);">
+          <div class="course-thumb-icon">🚨</div>
+        </div>
+        <div class="course-thumb-content">
+          <div class="course-badges">
+            <span class="badge badge-soon">Bientôt</span>
+            <span class="badge badge-white">Intermédiaire</span>
+          </div>
+          <div class="course-thumb-title">IA aux Urgences<br>&amp; Réanimation</div>
+        </div>
+      </div>
+      <div class="course-body">
+        <div class="course-meta">
+          <span class="course-meta-item">🕐 3 heures</span>
+          <span class="course-meta-item">🏥 Urgentistes</span>
+        </div>
+        <div class="course-desc">Aide à la décision en situation d'urgence, scores de triage assistés, protocoles d'antibiothérapie et préparation de transmissions structurées.</div>
+        <div class="course-footer">
+          <div class="course-price">Disponible T3 2026</div>
+          <button class="btn-card btn-card-disabled" disabled>Bientôt</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- COURSE 6 — Niveau Avancé -->
+    <div class="course-card" style="opacity:.75;">
+      <div class="course-thumb">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg,#1A1A0B 0%,#3A3818 60%,#6A8A0E 100%);">
+          <div class="course-thumb-icon">⚡</div>
+        </div>
+        <div class="course-thumb-content">
+          <div class="course-badges">
+            <span class="badge badge-soon">Bientôt</span>
+            <span class="badge badge-gold">Niveau Avancé</span>
+          </div>
+          <div class="course-thumb-title">Prompt Engineering<br>Niveau Avancé</div>
+        </div>
+      </div>
+      <div class="course-body">
+        <div class="course-meta">
+          <span class="course-meta-item">🕐 4–5 heures</span>
+          <span class="course-meta-item">📋 3 axes</span>
+        </div>
+        <div class="course-desc">Few-shot prompting, prompts système, intégration dans le flux hospitalier, revues de littérature semi-automatisées et outils départementaux. Prérequis : niveau débutant validé.</div>
+        <div class="course-footer">
+          <div class="course-price">Disponible T4 2026</div>
+          <button class="btn-card btn-card-disabled" disabled>Bientôt</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA mini -->
+  <div style="background:var(--navy-pale);border-top:1px solid var(--rule);padding:3rem;text-align:center;">
+    <div style="max-width:540px;margin:0 auto;">
+      <h3 style="font-family:var(--font-display);font-size:22px;color:var(--navy);margin-bottom:.5rem;">Votre hôpital veut accéder à tous les cours ?</h3>
+      <p style="font-size:14px;color:var(--ink-lt);margin-bottom:1.25rem;">Contactez-nous pour un accès institutionnel — jusqu'à 500 soignants, suivi de progression centralisé et sessions en présentiel sur site.</p>
+      <button class="btn-primary" style="margin:0 auto;" onclick="showToast('📧 Demande envoyée ! Notre équipe vous contacte dans 48h.')">Demander un accès institutionnel →</button>
+    </div>
+  </div>
+
+  <!-- Footer minimal -->
+  <div style="background:#080F1A;padding:1.5rem 3rem;text-align:center;">
+    <div style="font-size:12px;color:rgba(255,255,255,.25);">© 2025–2026 IAMED Academy · <span style="cursor:pointer;" onclick="showPage('home')">Accueil</span> · <span style="cursor:pointer;" onclick="showPage('about')">À propos</span></div>
+  </div>
+
+</div><!-- /page-courses -->
+
+
+<!-- ════════════════════════════════════
+     PAGE : ABOUT
+════════════════════════════════════ -->
+<div class="page" id="page-about">
+
+  <div class="about-hero">
+    <div class="about-hero-bg"></div>
+    <div class="about-hero-inner">
+      <div style="margin-bottom:1.5rem;">
+        <img src="assets/logo-banner.png" alt="IAMED Academy" style="width:120px;height:120px;object-fit:contain;filter:drop-shadow(0 4px 24px rgba(196,154,60,.25));">
+      </div>
+      <div class="hero-kicker" style="display:inline-flex;justify-content:center;margin-bottom:1rem;">
+        <div class="hero-kicker-dot"></div>
+        Notre mission
+      </div>
+      <h1 class="about-hero-title">Former les soignants<br>à l'IA <em>responsable</em></h1>
+      <p class="about-hero-sub">IAMED Academy est née d'une conviction : l'intelligence artificielle en médecine ne peut être efficace et sûre que si les médecins eux-mêmes en maîtrisent les outils, les limites et l'éthique.</p>
+    </div>
+  </div>
+
+  <div class="about-mission">
+    <div class="about-mission-text">
+      <div class="section-kicker" style="margin-bottom:.75rem;">Notre vision</div>
+      <h2 class="section-title" style="font-size:clamp(24px,3vw,36px);margin-bottom:1.25rem;">L'IA médicale ne remplacera<br>pas les médecins.<br><em>Les médecins formés à l'IA</em><br>remplaceront ceux qui ne le sont pas.</h2>
+      <p>IAMED Academy forme les professionnels de santé aux outils d'intelligence artificielle générative — non pas pour remplacer leur jugement clinique, mais pour amplifier leur expertise et libérer du temps pour ce qui ne peut être délégué : la relation de soin.</p>
+      <p>Chaque formation est ancrée dans des situations cliniques réelles, construite avec des praticiens, et mise à jour à chaque évolution majeure des recommandations médicales et des modèles d'IA.</p>
+      <p>Notre engagement : aucune formation IAMED ne sera jamais abstraite. Chaque concept s'apprend sur un cas patient, chaque outil est testé en contexte hospitalier réel.</p>
+    </div>
+    <div class="about-values">
+      <div class="value-card">
+        <div class="value-icon">🎯</div>
+        <div class="value-title">Praticité avant tout</div>
+        <div class="value-desc">Chaque prompt enseigné est immédiatement utilisable le lendemain en consultation.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🛡️</div>
+        <div class="value-title">Rigueur éthique</div>
+        <div class="value-desc">RGPD, anonymisation, limites réglementaires : intégrés dans chaque module, pas en annexe.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔬</div>
+        <div class="value-title">Fondements scientifiques</div>
+        <div class="value-desc">Sources open access uniquement. Chaque affirmation est étayée par la littérature médicale.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌍</div>
+        <div class="value-title">Accessibilité universelle</div>
+        <div class="value-desc">Gratuit ou en mode audit. L'accès à la formation en IA médicale ne doit pas dépendre des ressources.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <div class="team-section">
+    <div class="team-inner">
+      <div style="margin-bottom:0;">
+        <div class="section-kicker">L'équipe</div>
+        <h2 class="section-title">Conçu par des <em>praticiens</em><br>pour des praticiens</h2>
+        <p style="font-size:14px;color:var(--ink-lt);max-width:500px;margin-bottom:0;">Notre équipe réunit médecins, formateurs et experts en pédagogie médicale — tous convaincus que la formation à l'IA doit rester ancrée dans la clinique.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#0B1F35,#1D9E75);">DR</div>
+          <div class="team-name">Dr Responsable Pédagogique</div>
+          <div class="team-role">Directeur de la formation</div>
+          <div class="team-spec">Médecine interne · Hôpital universitaire</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#72243E,#D4537E);">EC</div>
+          <div class="team-name">Expert Contenu</div>
+          <div class="team-role">Responsable scientifique</div>
+          <div class="team-spec">Prompt engineering médical · IA clinique</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#085041,#1D9E75);">CP</div>
+          <div class="team-name">Coordinatrice Pédagogique</div>
+          <div class="team-role">Ingénierie de formation</div>
+          <div class="team-spec">Formation continue · DPC</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#633806,#BA7517);">RE</div>
+          <div class="team-name">Responsable Éthique & Réglementation</div>
+          <div class="team-role">Conseil juridique</div>
+          <div class="team-spec">RGPD santé · Droit médical</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Numbers -->
+  <div style="background:var(--navy);padding:4rem 3rem;">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.08);border-radius:var(--radius-lg);overflow:hidden;">
+      <div style="background:rgba(255,255,255,.03);padding:2rem;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:42px;font-weight:700;color:var(--white);margin-bottom:4px;">2<span style="color:var(--gold-lt);">+</span></div>
+        <div style="font-size:13px;color:rgba(255,255,255,.45);">Cours disponibles</div>
+      </div>
+      <div style="background:rgba(255,255,255,.03);padding:2rem;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:42px;font-weight:700;color:var(--white);margin-bottom:4px;">12<span style="color:var(--gold-lt);">h</span></div>
+        <div style="font-size:13px;color:rgba(255,255,255,.45);">de contenu médical</div>
+      </div>
+      <div style="background:rgba(255,255,255,.03);padding:2rem;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:42px;font-weight:700;color:var(--white);margin-bottom:4px;">100<span style="color:var(--gold-lt);">%</span></div>
+        <div style="font-size:13px;color:rgba(255,255,255,.45);">cas cliniques réels</div>
+      </div>
+      <div style="background:rgba(255,255,255,.03);padding:2rem;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:42px;font-weight:700;color:var(--white);margin-bottom:4px;">0<span style="color:var(--gold-lt);">€</span></div>
+        <div style="font-size:13px;color:rgba(255,255,255,.45);">pour commencer</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer minimal -->
+  <div style="background:#080F1A;padding:1.5rem 3rem;text-align:center;">
+    <div style="font-size:12px;color:rgba(255,255,255,.25);">© 2025–2026 IAMED Academy · <span style="cursor:pointer;" onclick="showPage('home')">Accueil</span> · <span style="cursor:pointer;" onclick="showPage('courses')">Cours</span></div>
+  </div>
+
+</div><!-- /page-about -->
+
+
+<!-- ════════════════════════════════════
+     PAGE : LOGIN
+════════════════════════════════════ -->
+<div class="page" id="page-login">
+  <div class="auth-page">
+    <div class="auth-left">
+      <div class="auth-left-bg"></div>
+      <div class="auth-left-content">
+        <div class="nav-logo" style="margin-bottom:2rem;" onclick="showPage('home')">
+          <img src="assets/logo-seal.png" alt="IAMED Academy" style="width:36px;height:36px;border-radius:9px;object-fit:cover;flex-shrink:0;">
+          <div class="nav-logo-text">IAMED <span>Academy</span></div>
+        </div>
+        <h2 class="auth-left-title">Reprenez là<br>où vous vous<br>étiez <em>arrêté</em></h2>
+        <p class="auth-left-sub">Votre progression, vos notes et vos attestations vous attendent.</p>
+        <ul class="auth-benefits">
+          <li>Suivi de progression par bloc et par module</li>
+          <li>Accès aux fiches exercices imprimables</li>
+          <li>Téléchargement de vos attestations</li>
+          <li>Historique de vos prompts favoris</li>
+        </ul>
+      </div>
+    </div>
+    <div class="auth-right">
+      <div class="auth-form-box">
+        <h2 class="auth-form-title">Connexion</h2>
+        <p class="auth-form-sub">Pas encore de compte ? <span onclick="showPage('signup')">S'inscrire gratuitement →</span></p>
+
+        <div class="form-field">
+          <label class="form-label">Adresse email</label>
+          <input class="form-input" type="email" placeholder="prenom.nom@hopital.fr">
+        </div>
+        <div class="form-field">
+          <label class="form-label">Mot de passe</label>
+          <input class="form-input" type="password" placeholder="••••••••">
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:-.25rem;margin-bottom:.5rem;">
+          <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-lt);cursor:pointer;">
+            <input type="checkbox" style="accent-color:var(--navy);"> Se souvenir de moi
+          </label>
+          <span style="font-size:13px;color:var(--gold-deep);cursor:pointer;">Mot de passe oublié ?</span>
+        </div>
+
+        <button class="btn-form" onclick="showToast('✅ Connexion réussie ! Bienvenue sur IAMED Academy.')">Se connecter</button>
+
+        <div class="form-divider">ou continuer avec</div>
+
+        <button class="btn-oauth" onclick="showToast('🔗 Connexion institutionnelle en cours...')">
+          🏥 Email institutionnel (SSO)
+        </button>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-login -->
+
+
+<!-- ════════════════════════════════════
+     PAGE : SIGNUP
+════════════════════════════════════ -->
+<div class="page" id="page-signup">
+  <div class="auth-page">
+    <div class="auth-left">
+      <div class="auth-left-bg"></div>
+      <div class="auth-left-content">
+        <div class="nav-logo" style="margin-bottom:2rem;" onclick="showPage('home')">
+          <img src="assets/logo-seal.png" alt="IAMED Academy" style="width:36px;height:36px;border-radius:9px;object-fit:cover;flex-shrink:0;">
+          <div class="nav-logo-text">IAMED <span>Academy</span></div>
+        </div>
+        <h2 class="auth-left-title">Commencez<br>votre formation<br><em>aujourd'hui</em></h2>
+        <p class="auth-left-sub">Accès gratuit. Aucun prérequis technique. Attestation de complétion incluse.</p>
+        <ul class="auth-benefits">
+          <li>Cours Prompt Engineering — Médecins disponible immédiatement</li>
+          <li>Fiches exercices et manuel PDF téléchargeables</li>
+          <li>QCM d'évaluation et attestation de complétion</li>
+          <li>Accès au carnet d'exercices interactif</li>
+          <li>Notifications lors des mises à jour de guidelines</li>
+        </ul>
+      </div>
+    </div>
+    <div class="auth-right">
+      <div class="auth-form-box">
+        <h2 class="auth-form-title">Créer mon compte</h2>
+        <p class="auth-form-sub">Déjà inscrit ? <span onclick="showPage('login')">Se connecter →</span></p>
+
+        <div class="access-code-box">
+          💡 Votre hôpital vous a fourni un code d'accès ? Saisissez-le ci-dessous pour un accès institutionnel complet.
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Code d'accès institutionnel (optionnel)</label>
+          <input class="form-input" type="text" placeholder="ex : HOPITAL-2026">
+        </div>
+
+        <div class="form-row">
+          <div class="form-field" style="margin-bottom:0;">
+            <label class="form-label">Prénom</label>
+            <input class="form-input" type="text" placeholder="Sophie">
+          </div>
+          <div class="form-field" style="margin-bottom:0;">
+            <label class="form-label">Nom</label>
+            <input class="form-input" type="text" placeholder="Martin">
+          </div>
+        </div>
+        <div style="margin-bottom:1rem;"></div>
+
+        <div class="form-field">
+          <label class="form-label">Email professionnel</label>
+          <input class="form-input" type="email" placeholder="prenom.nom@hopital.fr">
+        </div>
+
+        <div class="form-row">
+          <div class="form-field" style="margin-bottom:0;">
+            <label class="form-label">Profession</label>
+            <select class="form-select">
+              <option value="">Sélectionner...</option>
+              <option>Médecin généraliste</option>
+              <option>Médecin spécialiste</option>
+              <option>Interne / Résident</option>
+              <option>Infirmier(ère)</option>
+              <option>Étudiant en médecine</option>
+              <option>Autre professionnel de santé</option>
+            </select>
+          </div>
+          <div class="form-field" style="margin-bottom:0;">
+            <label class="form-label">Établissement</label>
+            <input class="form-input" type="text" placeholder="CHU de...">
+          </div>
+        </div>
+        <div style="margin-bottom:1rem;"></div>
+
+        <div class="form-field">
+          <label class="form-label">Mot de passe</label>
+          <input class="form-input" type="password" placeholder="8 caractères minimum">
+        </div>
+
+        <div style="margin-bottom:1rem;">
+          <label style="display:flex;align-items:flex-start;gap:8px;font-size:12.5px;color:var(--ink-lt);cursor:pointer;line-height:1.5;">
+            <input type="checkbox" style="accent-color:var(--navy);margin-top:2px;flex-shrink:0;">
+            J'accepte les conditions d'utilisation et la politique de confidentialité. Je comprends que les données patients ne doivent jamais être saisies sur la plateforme.
+          </label>
+        </div>
+
+        <button class="btn-form" onclick="showToast('🎉 Compte créé ! Vérifiez votre email pour activer votre accès.')">Créer mon compte gratuit</button>
+
+        <div style="font-size:11.5px;color:var(--ink-lt);text-align:center;margin-top:1rem;line-height:1.5;">
+          En créant un compte, vous confirmez être un professionnel de santé ou un étudiant dans ce domaine.
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /page-signup -->
+
+
+
+<!-- ════════════════════════════════════
+     PAGE : COURSE DETAIL
+════════════════════════════════════ -->
+<div class="page" id="page-course-detail">
+
+  <!-- COURSE HERO -->
+  <div style="background:var(--navy);padding:5rem 3rem 0;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(196,154,60,.1) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 10% 50%,rgba(14,138,107,.08) 0%,transparent 60%);"></div>
+    <div style="max-width:1200px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr 380px;gap:4rem;align-items:start;">
+      <div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.25rem;">
+          <span class="badge badge-new">Nouveau</span>
+          <span class="badge badge-white">Débutant</span>
+          <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px;">Mise à jour : mai 2026</span>
+        </div>
+        <h1 style="font-family:var(--font-display);font-size:clamp(28px,4vw,46px);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-.02em;margin-bottom:1rem;">Prompt Engineering<br>pour <span style="font-style:italic;color:var(--gold-lt);">Médecins</span></h1>
+        <p style="font-family:var(--font-serif);font-size:16px;color:rgba(255,255,255,.65);line-height:1.7;max-width:560px;margin-bottom:1.5rem;">Le guide de référence complet — des fondements de l'IA à la création de vos premiers outils cliniques, sans compétence technique requise.</p>
+        <div style="display:flex;gap:2rem;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.55);margin-bottom:2rem;">
+          <span>⭐ <strong style="color:#fff;">4.9</strong> / 5</span>
+          <span>👥 <strong style="color:#fff;">248</strong> inscrits</span>
+          <span>🕐 <strong style="color:#fff;">3–4 heures</strong></span>
+          <span>📋 <strong style="color:#fff;">4 blocs</strong> · 16 exercices</span>
+          <span>🏥 <strong style="color:#fff;">Hôpital universitaire</strong></span>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;font-size:13px;color:rgba(255,255,255,.5);">
+          <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-lt));display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--navy);font-size:13px;flex-shrink:0;">DR</div>
+          Créé par <strong style="color:rgba(255,255,255,.8);margin-left:4px;">Dr Responsable Pédagogique</strong> · Médecine interne, Hôpital universitaire
+        </div>
+      </div>
+      <!-- STICKY CARD -->
+      <div style="background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);overflow:hidden;margin-top:-1rem;">
+        <div style="height:180px;background:linear-gradient(135deg,#0B1F35 0%,#1A3A58 60%,#0E8A6B 100%);display:flex;align-items:center;justify-content:center;font-size:64px;opacity:.6;">🧠</div>
+        <div style="padding:1.5rem;">
+          <div style="font-size:22px;font-weight:700;color:var(--teal);margin-bottom:.25rem;">Accès gratuit</div>
+          <div style="font-size:13px;color:var(--ink-lt);margin-bottom:1.25rem;">Incluant : manuel PDF, fiches exercices, attestation</div>
+          <button class="btn-primary" style="width:100%;justify-content:center;font-size:15px;margin-bottom:.75rem;" onclick="showPage('signup')">S'inscrire gratuitement →</button>
+          <button class="btn-outline" style="width:100%;justify-content:center;color:var(--navy);border-color:var(--rule);background:none;" onclick="showPage('dashboard')">Démo — accès direct</button>
+          <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--rule);">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-lt);margin-bottom:.6rem;">Ce cours inclut</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="font-size:12.5px;color:var(--ink-md);display:flex;gap:8px;"><span>📋</span>4 blocs · 20 min présentation + 40 min atelier</div>
+              <div style="font-size:12.5px;color:var(--ink-md);display:flex;gap:8px;"><span>📄</span>Manuel de référence PDF (85 Ko)</div>
+              <div style="font-size:12.5px;color:var(--ink-md);display:flex;gap:8px;"><span>🎯</span>16 fiches exercices imprimables</div>
+              <div style="font-size:12.5px;color:var(--ink-md);display:flex;gap:8px;"><span>🧪</span>QCM d'évaluation 20 questions</div>
+              <div style="font-size:12.5px;color:var(--ink-md);display:flex;gap:8px;"><span>🏆</span>Attestation de complétion nominative</div>
+              <div style="font-size:12.5px;color:var(--ink-md);display:flex;gap:8px;"><span>♾️</span>Accès illimité + mises à jour incluses</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV TABS -->
+  <div style="background:#fff;border-bottom:1px solid var(--rule);position:sticky;top:64px;z-index:50;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 3rem;display:flex;gap:0;overflow-x:auto;">
+      <button class="filter-tab active" onclick="setFilter(this)">Aperçu</button>
+      <button class="filter-tab" onclick="setFilter(this)">Programme</button>
+      <button class="filter-tab" onclick="setFilter(this)">Ressources</button>
+      <button class="filter-tab" onclick="setFilter(this)">Évaluations</button>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div style="max-width:1200px;margin:0 auto;padding:3rem;display:grid;grid-template-columns:1fr 380px;gap:3rem;">
+
+    <div>
+      <!-- WHAT YOU LEARN -->
+      <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);padding:1.75rem;margin-bottom:1.5rem;">
+        <h2 style="font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--navy);margin-bottom:1.25rem;">Ce que vous allez apprendre</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+          <div style="display:flex;gap:10px;font-size:13px;color:var(--ink-md);line-height:1.5;"><span style="color:var(--teal);font-size:16px;flex-shrink:0;margin-top:-1px;">✓</span>Maîtriser les trois modes d'interrogation : connaissance intégrée, web search, deep research</div>
+          <div style="display:flex;gap:10px;font-size:13px;color:var(--ink-md);line-height:1.5;"><span style="color:var(--teal);font-size:16px;flex-shrink:0;margin-top:-1px;">✓</span>Évaluer la fiabilité d'une source avec la grille feux tricolores</div>
+          <div style="display:flex;gap:10px;font-size:13px;color:var(--ink-md);line-height:1.5;"><span style="color:var(--teal);font-size:16px;flex-shrink:0;margin-top:-1px;">✓</span>Structurer un prompt complexe avec le cadre PACTE (Persona, Action, Contexte, Ton, Exemples)</div>
+          <div style="display:flex;gap:10px;font-size:13px;color:var(--ink-md);line-height:1.5;"><span style="color:var(--teal);font-size:16px;flex-shrink:0;margin-top:-1px;">✓</span>Détecter et corriger la sycophancy de l'IA dans les diagnostics différentiels</div>
+          <div style="display:flex;gap:10px;font-size:13px;color:var(--ink-md);line-height:1.5;"><span style="color:var(--teal);font-size:16px;flex-shrink:0;margin-top:-1px;">✓</span>Analyser un tableau de données biologiques en 30 secondes</div>
+          <div style="display:flex;gap:10px;font-size:13px;color:var(--ink-md);line-height:1.5;"><span style="color:var(--teal);font-size:16px;flex-shrink:0;margin-top:-1px;">✓</span>Créer un calculateur de score CHA₂DS₂-VASc fonctionnel sans programmer</div>
+        </div>
+      </div>
+
+      <!-- PROGRAMME -->
+      <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:1.5rem;">
+        <div style="padding:1.25rem 1.75rem;border-bottom:1px solid var(--rule);">
+          <h2 style="font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--navy);">Programme détaillé</h2>
+        </div>
+        <!-- BLOC 0 -->
+        <div style="border-bottom:1px solid var(--rule);">
+          <div style="padding:1rem 1.75rem;display:flex;align-items:center;gap:12px;cursor:pointer;background:var(--navy-pale);" onclick="toggleBloc(this)">
+            <div style="width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">0</div>
+            <div style="flex:1;"><div style="font-size:14px;font-weight:600;color:var(--navy);">Introduction — Cadrage général</div><div style="font-size:12px;color:var(--ink-lt);">15 min · Avant le Bloc 1</div></div>
+            <span style="color:var(--ink-lt);font-size:18px;transition:transform .2s;" class="chevron">›</span>
+          </div>
+          <div class="bloc-content" style="display:none;padding:.75rem 1.75rem 1rem;background:var(--cream);">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.4rem 0;border-bottom:.5px solid var(--rule);"><span style="font-size:16px;">🎯</span>Pourquoi ce cours aujourd'hui — chiffres d'impact</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.4rem 0;border-bottom:.5px solid var(--rule);"><span style="font-size:16px;">⚠️</span>Les trois risques : hallucination, sycophancy, sources non vérifiées</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.4rem 0;"><span style="font-size:16px;">🔺</span>Le triangle des trois modes d'interrogation</div>
+            </div>
+          </div>
+        </div>
+        <!-- BLOC 1 -->
+        <div style="border-bottom:1px solid var(--rule);">
+          <div style="padding:1rem 1.75rem;display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="toggleBloc(this)" style="background:#fff;">
+            <div style="width:28px;height:28px;border-radius:50%;background:#1A4A80;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">1</div>
+            <div style="flex:1;"><div style="font-size:14px;font-weight:600;color:var(--navy);">Bloc 1 — Trouver l'information juste</div><div style="font-size:12px;color:var(--ink-lt);">60 min · 20 min présentation + 40 min atelier · 4 exercices</div></div>
+            <span style="color:var(--ink-lt);font-size:18px;" class="chevron">›</span>
+          </div>
+          <div class="bloc-content" style="display:none;padding:.75rem 1.75rem 1rem;background:var(--cream);">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-lt);margin-bottom:8px;">Présentation</div>
+            <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:1rem;">
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span>🔍</span>Les 3 modes en pratique clinique — tableau comparatif</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span>🚦</span>Grille feux tricolores — évaluer une source en 30 secondes</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span>🏗️</span>Anatomie d'un bon prompt médical — les 3 éléments</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;"><span>🧪</span>Réflexe anti-hallucination — données PMC 2025</div>
+            </div>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-lt);margin-bottom:8px;">Exercices atelier</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);">
+                <span style="background:#DCFCE7;color:#166534;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:600;flex-shrink:0;align-self:flex-start;margin-top:1px;">✦</span>Ex.01 — Le diagnostic de vitesse (iSGLT2) · Débutant
+              </div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);">
+                <span style="background:#FEF9C3;color:#854D0E;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:600;flex-shrink:0;align-self:flex-start;margin-top:1px;">✦✦</span>Ex.02 — La recommandation ESC/ESH 2024 · Intermédiaire
+              </div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);">
+                <span style="background:#FEE2E2;color:#991B1B;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:600;flex-shrink:0;align-self:flex-start;margin-top:1px;">✦✦✦</span>Ex.03 — Synthèse BPCO + IC + FA (deep research) · Avancé
+              </div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;">
+                <span style="background:#FEF9C3;color:#854D0E;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:600;flex-shrink:0;align-self:flex-start;margin-top:1px;">✦✦</span>Ex.04 — Le test des sources (metformine cardio) · Intermédiaire
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- BLOC 2 -->
+        <div style="border-bottom:1px solid var(--rule);">
+          <div style="padding:1rem 1.75rem;display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="toggleBloc(this)">
+            <div style="width:28px;height:28px;border-radius:50%;background:#80143A;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">2</div>
+            <div style="flex:1;"><div style="font-size:14px;font-weight:600;color:var(--navy);">Bloc 2 — L'IA comme partenaire clinique</div><div style="font-size:12px;color:var(--ink-lt);">60 min · 20 min présentation + 40 min atelier · 4 exercices</div></div>
+            <span style="color:var(--ink-lt);font-size:18px;" class="chevron">›</span>
+          </div>
+          <div class="bloc-content" style="display:none;padding:.75rem 1.75rem 1rem;background:var(--cream);">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-lt);margin-bottom:8px;">Présentation</div>
+            <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:1rem;">
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span>🎭</span>Le cadre PACTE — 5 composantes illustrées</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span>🔗</span>Chain-of-thought — comparaison question directe vs décomposée</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span>🪞</span>La sycophancy — définition, données (25–50 % PMC 2025), 2 prompts</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;"><span>📝</span>Rédaction médicale assistée — 3 axes de critique</div>
+            </div>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-lt);margin-bottom:8px;">Exercices atelier</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span style="background:#DCFCE7;color:#166534;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:600;flex-shrink:0;align-self:flex-start;margin-top:1px;">✦</span>Ex.01 — Diagnostic différentiel (douleurs thoraciques) · Débutant</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span style="background:#FEF9C3;color:#854D0E;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:600;flex-shrink:0;align-self:flex-start;margin-top:1px;">✦✦</span>Ex.02 — Prompt PACTE complet (anticoagulants péri-op) · Intermédiaire</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span style="background:#FEE2E2;color:#991B1B;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:600;flex-shrink:0;align-self:flex-start;margin-top:1px;">✦✦✦</span>Ex.03 — Détecter la sycophancy (épilepsie focale) · Avancé</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;"><span style="background:#FEF9C3;color:#854D0E;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:600;flex-shrink:0;align-self:flex-start;margin-top:1px;">✦✦</span>Ex.04 — Critique de compte-rendu (3 axes) · Intermédiaire</div>
+            </div>
+          </div>
+        </div>
+        <!-- BLOC 3 -->
+        <div style="border-bottom:1px solid var(--rule);">
+          <div style="padding:1rem 1.75rem;display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="toggleBloc(this)">
+            <div style="width:28px;height:28px;border-radius:50%;background:#085041;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">3</div>
+            <div style="flex:1;"><div style="font-size:14px;font-weight:600;color:var(--navy);">Bloc 3 — Images, données et outils sans code</div><div style="font-size:12px;color:var(--ink-lt);">60 min · 20 min présentation + 40 min atelier · 4 exercices</div></div>
+            <span style="color:var(--ink-lt);font-size:18px;" class="chevron">›</span>
+          </div>
+          <div class="bloc-content" style="display:none;padding:.75rem 1.75rem 1rem;background:var(--cream);">
+            <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:1rem;">
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span>📊</span>Analyse de données cliniques — statistiques descriptives en 30 s</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span>🫀</span>Description d'images médicales — les 4 éléments structurants</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span>🛠️</span>Créer des outils sans code — 3 niveaux de complexité</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;"><span>⚖️</span>Éthique &amp; limites réglementaires — RGPD et mention médico-légale</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span style="background:#DCFCE7;color:#166534;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:600;flex-shrink:0;align-self:flex-start;margin-top:1px;">✦</span>Ex.01 — Tableau HbA1c, 12 patients DT2 · Débutant</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span style="background:#FEF9C3;color:#854D0E;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:600;flex-shrink:0;align-self:flex-start;margin-top:1px;">✦✦</span>Ex.02 — ECG de FA pédagogique pour internes · Intermédiaire</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span style="background:#FEE2E2;color:#991B1B;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:600;flex-shrink:0;align-self:flex-start;margin-top:1px;">✦✦✦</span>Ex.03 — Calculateur CHA₂DS₂-VASc HTML/JS · Avancé</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;"><span style="background:#FEF9C3;color:#854D0E;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:600;flex-shrink:0;align-self:flex-start;margin-top:1px;">✦✦</span>Ex.04 — Document patient DT2 imprimable · Intermédiaire</div>
+            </div>
+          </div>
+        </div>
+        <!-- BLOC 4 -->
+        <div>
+          <div style="padding:1rem 1.75rem;display:flex;align-items:center;gap:12px;cursor:pointer;" onclick="toggleBloc(this)">
+            <div style="width:28px;height:28px;border-radius:50%;background:#5C4A0A;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;">4</div>
+            <div style="flex:1;"><div style="font-size:14px;font-weight:600;color:var(--navy);">Bloc 4 — Intégration &amp; évaluation <span style="font-size:11px;font-weight:400;color:var(--ink-lt);">(optionnel)</span></div><div style="font-size:12px;color:var(--ink-lt);">60 min · Cas intégrateur + QCM 20 questions</div></div>
+            <span style="color:var(--ink-lt);font-size:18px;" class="chevron">›</span>
+          </div>
+          <div class="bloc-content" style="display:none;padding:.75rem 1.75rem 1rem;background:var(--cream);">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span>🔁</span>Synthèse des 3 objectifs — les 5 réflexes quotidiens</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span>⚠️</span>Limites structurelles à ne jamais oublier</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span>🏥</span>Cas intégrateur — patient 68 ans, BPCO+IC+FA+DT2</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;border-bottom:.5px solid var(--rule);"><span>📝</span>QCM 20 questions — scénarios cliniques</div>
+              <div style="font-size:13px;color:var(--ink-md);display:flex;gap:8px;padding:.35rem 0;"><span>🏆</span>Remise de l'attestation de complétion</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIALS -->
+      <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);padding:1.75rem;margin-bottom:1.5rem;">
+        <h2 style="font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--navy);margin-bottom:1.25rem;">Avis des participants</h2>
+        <div style="display:flex;align-items:center;gap:2rem;padding-bottom:1.25rem;border-bottom:1px solid var(--rule);margin-bottom:1.25rem;">
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display);font-size:52px;font-weight:700;color:var(--navy);line-height:1;">4.9</div>
+            <div style="color:var(--gold);font-size:18px;letter-spacing:2px;">★★★★★</div>
+            <div style="font-size:12px;color:var(--ink-lt);margin-top:3px;">248 avis</div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:5px;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;"><span>★★★★★</span><div style="flex:1;height:6px;background:var(--rule);border-radius:3px;overflow:hidden;"><div style="width:88%;height:100%;background:var(--gold);border-radius:3px;"></div></div><span style="color:var(--ink-lt);">88%</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;"><span>★★★★☆</span><div style="flex:1;height:6px;background:var(--rule);border-radius:3px;overflow:hidden;"><div style="width:10%;height:100%;background:var(--gold);border-radius:3px;"></div></div><span style="color:var(--ink-lt);">10%</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;"><span>★★★☆☆</span><div style="flex:1;height:6px;background:var(--rule);border-radius:3px;overflow:hidden;"><div style="width:2%;height:100%;background:var(--gold);border-radius:3px;"></div></div><span style="color:var(--ink-lt);">2%</span></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1.25rem;">
+          <div style="padding-bottom:1.25rem;border-bottom:1px solid var(--rule);">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:.5rem;">
+              <div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#0B1F35,#1D9E75);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;">SM</div>
+              <div><div style="font-size:13px;font-weight:600;">Dr Sophie M. — Cardiologue</div><div style="color:var(--gold);font-size:12px;">★★★★★</div></div>
+            </div>
+            <p style="font-size:13.5px;color:var(--ink-md);line-height:1.65;font-style:italic;">"L'exercice sur le calculateur CHA₂DS₂-VASc m'a bluffée. En 8 minutes, j'avais un outil fonctionnel que j'utilise maintenant en consultation. Le format 20+40 min est parfaitement adapté à nos emplois du temps."</p>
+          </div>
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:.5rem;">
+              <div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#72243E,#D4537E);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;">TK</div>
+              <div><div style="font-size:13px;font-weight:600;">Dr Tarek K. — Interniste</div><div style="color:var(--gold);font-size:12px;">★★★★★</div></div>
+            </div>
+            <p style="font-size:13.5px;color:var(--ink-md);line-height:1.65;font-style:italic;">"Le module anti-sycophancy a changé ma façon d'utiliser l'IA. Je testais les deux versions sur un même cas : la différence est frappante. Ces deux prompts font maintenant partie de ma routine quotidienne."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div style="display:flex;flex-direction:column;gap:1.25rem;">
+      <!-- RESSOURCES -->
+      <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);padding:1.5rem;">
+        <h3 style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:1rem;">Ressources incluses</h3>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:10px;padding:.6rem;background:var(--cream);border-radius:var(--radius-sm);cursor:pointer;transition:background .15s;" onclick="downloadFile('manuel_prompt_engineering_medecins.html','Manuel_Prompt_Engineering_Medecins.html','📄 Manuel téléchargé avec succès !')">
+            <span style="font-size:20px;">📄</span>
+            <div style="flex:1;"><div style="font-size:13px;font-weight:500;color:var(--ink);">Manuel de référence</div><div style="font-size:11px;color:var(--ink-lt);">HTML · 85 Ko · 4 chapitres + 4 annexes</div></div>
+            <span style="font-size:12px;color:var(--blue);font-weight:600;">↓</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:.6rem;background:var(--cream);border-radius:var(--radius-sm);cursor:pointer;" onclick="downloadFile('cours_prompt_engineering_medecins.html','Fiches_Exercices_Prompt_Engineering.html','📋 Fiches exercices téléchargées !')">
+            <span style="font-size:20px;">📋</span>
+            <div style="flex:1;"><div style="font-size:13px;font-weight:500;color:var(--ink);">Fiches exercices (16 fiches)</div><div style="font-size:11px;color:var(--ink-lt);">HTML imprimable · Slides + ateliers</div></div>
+            <span style="font-size:12px;color:var(--blue);font-weight:600;">↓</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:.6rem;background:var(--cream);border-radius:var(--radius-sm);cursor:pointer;" onclick="downloadFile('brochure_prompt_engineering_medecins.html','Brochure_Prompt_Engineering_Medecins.html','📑 Brochure téléchargée !')">
+            <span style="font-size:20px;">📑</span>
+            <div style="flex:1;"><div style="font-size:13px;font-weight:500;color:var(--ink);">Brochure de présentation</div><div style="font-size:11px;color:var(--ink-lt);">HTML A4 recto-verso · À distribuer 1 sem. avant</div></div>
+            <span style="font-size:12px;color:var(--blue);font-weight:600;">↓</span>
+          </div>
+        </div>
+      </div>
+      <!-- PRÉREQUIS -->
+      <div style="background:var(--gold-pale);border:1px solid rgba(196,154,60,.25);border-radius:var(--radius-lg);padding:1.5rem;">
+        <h3 style="font-size:14px;font-weight:600;color:var(--amber);margin-bottom:.75rem;">📌 Prérequis &amp; matériel</h3>
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink-md);">
+          <div>✓ Aucun prérequis technique</div>
+          <div>✓ Ordinateur ou tablette</div>
+          <div>✓ Compte Claude.ai (gratuit)</div>
+          <div>✓ Connexion internet</div>
+          <div style="color:var(--amber);margin-top:4px;">⭐ Recommandé : Claude Pro pour web search + deep research</div>
+        </div>
+      </div>
+      <!-- FORMATEUR -->
+      <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);padding:1.5rem;">
+        <h3 style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:1rem;">Votre formateur</h3>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--teal));display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0;">DR</div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--navy);">Dr Responsable Pédagogique</div>
+            <div style="font-size:12px;color:var(--gold-deep);font-weight:500;margin-bottom:4px;">Directeur de la formation — IAMED Academy</div>
+            <div style="font-size:12.5px;color:var(--ink-lt);line-height:1.5;">Médecin interniste, hôpital universitaire. Formateur en IA médicale depuis 2023. Auteur du cadre PACTE adapté à la clinique.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     PAGE : DASHBOARD
+════════════════════════════════════ -->
+<div class="page" id="page-dashboard">
+
+  <div style="background:var(--navy);padding:3rem 3rem 2rem;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+      <div>
+        <div style="font-size:12px;color:rgba(255,255,255,.45);margin-bottom:4px;">Bon retour,</div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:.25rem;">
+          <img src="assets/logo-seal.png" alt="IAMED" style="width:28px;height:28px;border-radius:6px;object-fit:cover;">
+          <div style="font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.06em;text-transform:uppercase;">IAMED Academy</div>
+        </div>
+        <h1 style="font-family:var(--font-display);font-size:26px;font-weight:700;color:#fff;">Dr Sophie Martin 👋</h1>
+        <div style="font-size:13px;color:rgba(255,255,255,.5);margin-top:4px;">Cardiologue · CHU de Lyon · Inscrite le 12 mai 2026</div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-md);padding:.75rem 1.25rem;text-align:center;">
+          <div style="font-family:var(--font-display);font-size:22px;font-weight:700;color:#fff;">2</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.45);">cours suivis</div>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-md);padding:.75rem 1.25rem;text-align:center;">
+          <div style="font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--gold-lt);">1</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.45);">attestation</div>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-md);padding:.75rem 1.25rem;text-align:center;">
+          <div style="font-family:var(--font-display);font-size:22px;font-weight:700;color:#6CE67C;">68<span style="font-size:14px;">%</span></div>
+          <div style="font-size:11px;color:rgba(255,255,255,.45);">progression</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:2.5rem 3rem;display:grid;grid-template-columns:1fr 320px;gap:2.5rem;align-items:start;">
+
+    <!-- MAIN COL -->
+    <div>
+      <!-- IN PROGRESS -->
+      <div style="margin-bottom:2rem;">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-lt);margin-bottom:1rem;">Cours en cours</div>
+        <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;" onclick="showPage('module')">
+          <div style="display:grid;grid-template-columns:180px 1fr;height:140px;">
+            <div style="background:linear-gradient(135deg,#0B1F35 0%,#1A3A58 60%,#0E8A6B 100%);display:flex;align-items:center;justify-content:center;font-size:48px;opacity:.6;">🧠</div>
+            <div style="padding:1.25rem 1.5rem;display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.4rem;">
+                  <span style="font-size:11px;font-weight:600;background:var(--blue-lt);color:var(--blue);padding:2px 8px;border-radius:20px;">En cours</span>
+                  <span style="font-size:12px;color:var(--ink-lt);">Bloc 2 / 4</span>
+                </div>
+                <div style="font-family:var(--font-display);font-size:17px;font-weight:600;color:var(--navy);margin-bottom:.25rem;">Prompt Engineering pour Médecins</div>
+                <div style="font-size:12.5px;color:var(--ink-lt);">Prochain : Ex.03 — Détecter la sycophancy</div>
+              </div>
+              <div>
+                <div style="height:5px;background:var(--rule);border-radius:3px;overflow:hidden;margin-bottom:4px;">
+                  <div style="width:68%;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-lt));border-radius:3px;"></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink-lt);">
+                  <span>68% complété</span>
+                  <span style="color:var(--blue);font-weight:600;">Continuer →</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECENT ACTIVITY -->
+      <div style="margin-bottom:2rem;">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-lt);margin-bottom:1rem;">Activité récente</div>
+        <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);overflow:hidden;">
+          <div style="display:flex;flex-direction:column;divide-y:var(--rule);">
+            <div style="padding:1rem 1.5rem;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--rule);">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--green-lt);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">✅</div>
+              <div style="flex:1;">
+                <div style="font-size:13.5px;font-weight:500;color:var(--ink);">Bloc 1 complété — Trouver l'information juste</div>
+                <div style="font-size:12px;color:var(--ink-lt);">Exercices 1 à 4 réussis · Score : 92%</div>
+              </div>
+              <div style="font-size:11.5px;color:var(--ink-lt);flex-shrink:0;">Hier, 14h32</div>
+            </div>
+            <div style="padding:1rem 1.5rem;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--rule);">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">📄</div>
+              <div style="flex:1;">
+                <div style="font-size:13.5px;font-weight:500;color:var(--ink);">Manuel de référence téléchargé</div>
+                <div style="font-size:12px;color:var(--ink-lt);">manuel_prompt_engineering_medecins.html</div>
+              </div>
+              <div style="font-size:11.5px;color:var(--ink-lt);flex-shrink:0;">Hier, 13h15</div>
+            </div>
+            <div style="padding:1rem 1.5rem;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--rule);">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--teal-lt);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">🔍</div>
+              <div style="flex:1;">
+                <div style="font-size:13.5px;font-weight:500;color:var(--ink);">Ex.04 — Test des sources réussi</div>
+                <div style="font-size:12px;color:var(--ink-lt);">1 PMID vérifié sur PubMed · Grille feux tricolores appliquée</div>
+              </div>
+              <div style="font-size:11.5px;color:var(--ink-lt);flex-shrink:0;">Hier, 13h08</div>
+            </div>
+            <div style="padding:1rem 1.5rem;display:flex;align-items:center;gap:12px;">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">🎓</div>
+              <div style="flex:1;">
+                <div style="font-size:13.5px;font-weight:500;color:var(--ink);">Inscription — Prompt Engineering pour Médecins</div>
+                <div style="font-size:12px;color:var(--ink-lt);">Cours débloqué · Accès gratuit</div>
+              </div>
+              <div style="font-size:11.5px;color:var(--ink-lt);flex-shrink:0;">12 mai, 9h00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE PROGRESS DETAIL -->
+      <div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-lt);margin-bottom:1rem;">Détail de progression</div>
+        <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);overflow:hidden;">
+          <div style="padding:.85rem 1.5rem;background:var(--navy);display:flex;align-items:center;gap:10px;">
+            <span style="font-size:18px;">🧠</span>
+            <span style="font-size:13.5px;font-weight:600;color:#fff;">Prompt Engineering pour Médecins</span>
+          </div>
+          <div style="padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:.75rem;">
+            <!-- Intro -->
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:28px;height:28px;border-radius:50%;background:var(--green-lt);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--green);font-weight:700;flex-shrink:0;">✓</div>
+              <div style="flex:1;">
+                <div style="font-size:13px;font-weight:500;color:var(--ink);">Introduction — Cadrage général</div>
+                <div style="font-size:11.5px;color:var(--ink-lt);">15 min · Complété</div>
+              </div>
+              <span style="font-size:11px;background:var(--green-lt);color:var(--green);padding:2px 8px;border-radius:20px;font-weight:600;">100%</span>
+            </div>
+            <!-- Bloc 1 -->
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:28px;height:28px;border-radius:50%;background:var(--green-lt);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--green);font-weight:700;flex-shrink:0;">✓</div>
+              <div style="flex:1;">
+                <div style="font-size:13px;font-weight:500;color:var(--ink);">Bloc 1 — Trouver l'information juste</div>
+                <div style="font-size:11.5px;color:var(--ink-lt);">60 min · 4 exercices réussis · Score : 92%</div>
+              </div>
+              <span style="font-size:11px;background:var(--green-lt);color:var(--green);padding:2px 8px;border-radius:20px;font-weight:600;">100%</span>
+            </div>
+            <!-- Bloc 2 -->
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:28px;height:28px;border-radius:50%;background:var(--blue-lt);border:2px solid var(--blue);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--blue);font-weight:700;flex-shrink:0;">2/4</div>
+              <div style="flex:1;">
+                <div style="font-size:13px;font-weight:500;color:var(--ink);">Bloc 2 — L'IA comme partenaire clinique</div>
+                <div style="font-size:11.5px;color:var(--ink-lt);">2 exercices sur 4 · Prochain : Ex.03</div>
+              </div>
+              <span style="font-size:11px;background:var(--blue-lt);color:var(--blue);padding:2px 8px;border-radius:20px;font-weight:600;">50%</span>
+            </div>
+            <!-- Bloc 3 -->
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:28px;height:28px;border-radius:50%;background:var(--rule);border:2px solid var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--ink-lt);font-weight:700;flex-shrink:0;">3</div>
+              <div style="flex:1;">
+                <div style="font-size:13px;font-weight:500;color:var(--ink-lt);">Bloc 3 — Images, données et outils sans code</div>
+                <div style="font-size:11.5px;color:var(--ink-lt);">Non débuté</div>
+              </div>
+              <span style="font-size:11px;background:var(--rule);color:var(--ink-lt);padding:2px 8px;border-radius:20px;font-weight:600;">0%</span>
+            </div>
+            <!-- Bloc 4 -->
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:28px;height:28px;border-radius:50%;background:var(--rule);border:2px solid var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--ink-lt);font-weight:700;flex-shrink:0;">4</div>
+              <div style="flex:1;">
+                <div style="font-size:13px;font-weight:500;color:var(--ink-lt);">Bloc 4 — Intégration &amp; évaluation</div>
+                <div style="font-size:11.5px;color:var(--ink-lt);">Non débuté · QCM + cas intégrateur</div>
+              </div>
+              <span style="font-size:11px;background:var(--rule);color:var(--ink-lt);padding:2px 8px;border-radius:20px;font-weight:600;">0%</span>
+            </div>
+          </div>
+          <div style="padding:1rem 1.5rem;border-top:1px solid var(--rule);background:var(--cream);display:flex;justify-content:center;">
+            <button class="btn-primary" style="font-size:14px;" onclick="showPage('module')">Continuer le cours → Bloc 2, Ex.03</button>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.75rem;justify-content:center;">
+              <button onclick="showPage('qcm')" style="font-size:12.5px;padding:.45rem 1rem;border-radius:999px;background:var(--gold-pale);border:1px solid rgba(196,154,60,.3);color:var(--amber-d);cursor:pointer;font-family:var(--font-body);font-weight:500;">📝 Passer le QCM</button>
+              <button onclick="showPage('exercices')" style="font-size:12.5px;padding:.45rem 1rem;border-radius:999px;background:var(--blue-lt);border:1px solid #C8DDF5;color:var(--blue-d);cursor:pointer;font-family:var(--font-body);font-weight:500;">📋 Mes exercices</button>
+              <button onclick="showPage('certificat')" style="font-size:12.5px;padding:.45rem 1rem;border-radius:999px;background:var(--green-lt);border:1px solid #B8DDA0;color:var(--green-d);cursor:pointer;font-family:var(--font-body);font-weight:500;">🏆 Mon attestation</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div style="display:flex;flex-direction:column;gap:1.25rem;">
+      <!-- ATTESTATION -->
+      <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);overflow:hidden;">
+        <div style="background:linear-gradient(135deg,var(--navy) 0%,var(--navy-lt) 100%);padding:1.25rem;text-align:center;">
+          <div style="font-size:32px;margin-bottom:.4rem;">🏆</div>
+          <div style="font-size:13px;font-weight:600;color:var(--gold-lt);">Attestation en cours</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:3px;">Complétez le cours pour la télécharger</div>
+        </div>
+        <div style="padding:1.25rem;">
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;margin-bottom:.5rem;">
+            <span style="color:var(--ink-lt);">Progression globale</span>
+            <span style="font-weight:600;color:var(--navy);">68%</span>
+          </div>
+          <div style="height:8px;background:var(--rule);border-radius:4px;overflow:hidden;margin-bottom:1rem;">
+            <div style="width:68%;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-lt));border-radius:4px;transition:width 1s;"></div>
+          </div>
+          <div style="font-size:12.5px;color:var(--ink-lt);line-height:1.6;margin-bottom:1rem;">Il vous reste 2 blocs et le QCM final (20 questions) pour obtenir votre attestation.</div>
+          <button class="btn-card btn-card-primary" style="width:100%;text-align:center;padding:.6rem;" onclick="showPage('module')">Reprendre le cours</button>
+        </div>
+      </div>
+      <!-- QUICK ACTIONS -->
+      <div style="background:var(--navy);border-radius:var(--radius-lg);overflow:hidden;">
+        <div style="padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.08);">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:.1rem;">Actions rapides</div>
+        </div>
+        <div style="padding:.75rem;">
+          <button onclick="showPage('qcm')" style="width:100%;text-align:left;padding:.7rem .85rem;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.8);font-size:13px;cursor:pointer;font-family:var(--font-body);display:flex;align-items:center;gap:8px;margin-bottom:6px;transition:background .15s;" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
+            📝 <span>Passer le QCM final</span>
+            <span style="margin-left:auto;font-size:10px;background:var(--gold);color:var(--navy);padding:1px 7px;border-radius:20px;font-weight:700;">20 Q</span>
+          </button>
+          <button onclick="showPage('exercices')" style="width:100%;text-align:left;padding:.7rem .85rem;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.8);font-size:13px;cursor:pointer;font-family:var(--font-body);display:flex;align-items:center;gap:8px;margin-bottom:6px;transition:background .15s;" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
+            📋 <span>Espace exercices</span>
+            <span style="margin-left:auto;font-size:10px;color:rgba(255,255,255,.4);">13 fiches</span>
+          </button>
+          <button onclick="showPage('certificat')" style="width:100%;text-align:left;padding:.7rem .85rem;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.8);font-size:13px;cursor:pointer;font-family:var(--font-body);display:flex;align-items:center;gap:8px;transition:background .15s;" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
+            🏆 <span>Mon attestation</span>
+            <span style="margin-left:auto;font-size:10px;color:rgba(255,255,255,.4);">PDF A4</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- NEXT COURSES -->
+      <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);padding:1.25rem;">
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-lt);margin-bottom:.85rem;">Prochains cours</div>
+        <div style="display:flex;flex-direction:column;gap:.75rem;">
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:.6rem;background:var(--cream);border-radius:var(--radius-sm);">
+            <div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,#1A0B35,#8A0E6B);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">🩻</div>
+            <div><div style="font-size:12.5px;font-weight:500;color:var(--navy);">IA en Imagerie Médicale</div><div style="font-size:11px;color:var(--ink-lt);">Disponible T2 2026 · Notifier</div></div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;padding:.6rem;background:var(--cream);border-radius:var(--radius-sm);">
+            <div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,#0B2A1A,#0E8A4A);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">📊</div>
+            <div><div style="font-size:12.5px;font-weight:500;color:var(--navy);">IA &amp; Recherche Clinique</div><div style="font-size:11px;color:var(--ink-lt);">Disponible T3 2026 · Notifier</div></div>
+          </div>
+        </div>
+      </div>
+      <!-- QUICK PROMPTS -->
+      <div style="background:var(--navy);border-radius:var(--radius-lg);padding:1.25rem;">
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:.85rem;">Prompts favoris</div>
+        <div style="display:flex;flex-direction:column;gap:.6rem;">
+          <div style="background:rgba(255,255,255,.07);border-radius:6px;padding:.6rem .8rem;font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.7);cursor:pointer;transition:background .15s;" onclick="showToast('📋 Prompt copié !')">
+            <span style="color:var(--gold-lt);">Avocat du diable :</span><br>"Quel diagnostic ai-je le plus de risque de manquer ?"
+          </div>
+          <div style="background:rgba(255,255,255,.07);border-radius:6px;padding:.6rem .8rem;font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.7);cursor:pointer;transition:background .15s;" onclick="showToast('📋 Prompt copié !')">
+            <span style="color:var(--gold-lt);">Vérif. source :</span><br>"Cette étude existe-t-elle ? Vérifie le PMID [n°]."
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     PAGE : MODULE (LECTEUR)
+════════════════════════════════════ -->
+<div class="page" id="page-module">
+  <!-- TOP BAR -->
+  <div style="background:#fff;border-bottom:1px solid var(--rule);height:52px;display:flex;align-items:center;padding:0 2rem;gap:1rem;position:sticky;top:64px;z-index:90;">
+    <button style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-lt);background:none;border:none;cursor:pointer;" onclick="showPage('dashboard')">← Tableau de bord</button>
+    <div style="width:1px;height:18px;background:var(--rule);"></div>
+    <div style="font-size:13px;color:var(--ink-md);font-weight:500;">Prompt Engineering pour Médecins</div>
+    <div style="font-size:12px;color:var(--ink-lt);">· Bloc 2, Exercice 3 — Détecter la sycophancy</div>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:.75rem;">
+      <div style="font-size:12px;color:var(--ink-lt);">Progression : 68%</div>
+      <div style="width:120px;height:5px;background:var(--rule);border-radius:3px;overflow:hidden;">
+        <div style="width:68%;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-lt));border-radius:3px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAYOUT -->
+  <div style="display:grid;grid-template-columns:280px 1fr;height:calc(100vh - 116px);overflow:hidden;">
+    <!-- SIDEBAR NAV -->
+    <div style="background:var(--white);border-right:1px solid var(--rule);overflow-y:auto;padding:1.25rem 0;">
+      <div style="padding:0 1.25rem;margin-bottom:1rem;">
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-lt);">Bloc 2 — Partenaire clinique</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:2px;padding:0 .75rem;">
+        <!-- Intro -->
+        <div style="padding:.6rem .75rem;border-radius:8px;display:flex;align-items:center;gap:10px;background:var(--green-lt);cursor:pointer;">
+          <span style="width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;">✓</span>
+          <span style="font-size:12.5px;color:var(--green-d);font-weight:500;">Présentation PACTE</span>
+        </div>
+        <div style="padding:.6rem .75rem;border-radius:8px;display:flex;align-items:center;gap:10px;background:var(--green-lt);cursor:pointer;">
+          <span style="width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;">✓</span>
+          <span style="font-size:12.5px;color:var(--green-d);font-weight:500;">Ex.01 — Diag. différentiel</span>
+        </div>
+        <div style="padding:.6rem .75rem;border-radius:8px;display:flex;align-items:center;gap:10px;background:var(--green-lt);cursor:pointer;">
+          <span style="width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;">✓</span>
+          <span style="font-size:12.5px;color:var(--green-d);font-weight:500;">Ex.02 — Prompt PACTE</span>
+        </div>
+        <div style="padding:.6rem .75rem;border-radius:8px;display:flex;align-items:center;gap:10px;background:var(--blue-lt);cursor:pointer;">
+          <span style="width:22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;animation:pulse 2s infinite;">▶</span>
+          <span style="font-size:12.5px;color:var(--blue);font-weight:600;">Ex.03 — Sycophancy ← Ici</span>
+        </div>
+        <div style="padding:.6rem .75rem;border-radius:8px;display:flex;align-items:center;gap:10px;cursor:pointer;opacity:.5;">
+          <span style="width:22px;height:22px;border-radius:50%;background:var(--rule);color:var(--ink-lt);display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;">4</span>
+          <span style="font-size:12.5px;color:var(--ink-lt);">Ex.04 — Critique CR</span>
+        </div>
+      </div>
+
+      <div style="height:1px;background:var(--rule);margin:1rem .75rem;"></div>
+      <div style="padding:0 1.25rem;margin-bottom:.5rem;">
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-lt);">Bloc 3 (suivant)</div>
+      </div>
+      <div style="padding:0 .75rem;display:flex;flex-direction:column;gap:2px;opacity:.45;">
+        <div style="padding:.55rem .75rem;border-radius:8px;font-size:12.5px;color:var(--ink-lt);">Présentation — Données &amp; images</div>
+        <div style="padding:.55rem .75rem;border-radius:8px;font-size:12.5px;color:var(--ink-lt);">Ex.01 — Tableau HbA1c</div>
+        <div style="padding:.55rem .75rem;border-radius:8px;font-size:12.5px;color:var(--ink-lt);">Ex.02 — ECG de FA</div>
+        <div style="padding:.55rem .75rem;border-radius:8px;font-size:12.5px;color:var(--ink-lt);">Ex.03 — Calculateur CHA₂DS₂</div>
+        <div style="padding:.55rem .75rem;border-radius:8px;font-size:12.5px;color:var(--ink-lt);">Ex.04 — Document patient</div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div style="overflow-y:auto;background:var(--cream);">
+      <div style="max-width:760px;margin:0 auto;padding:2.5rem 2rem;">
+
+        <!-- EXERCISE HEADER -->
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:1.75rem;">
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--rose);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;">03</div>
+          <div>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--rose);margin-bottom:2px;">Bloc 2 · Exercice 3</div>
+            <h1 style="font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--navy);line-height:1.2;">Détecter et corriger la sycophancy</h1>
+          </div>
+          <span style="margin-left:auto;background:var(--red-lt);color:var(--red);font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">Avancé</span>
+        </div>
+
+        <!-- SCENARIO -->
+        <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1.25rem;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-lt);margin-bottom:.6rem;">📋 Scénario clinique</div>
+          <p style="font-size:14px;color:var(--ink-md);line-height:1.7;border-left:2px solid var(--rose);padding-left:.85rem;font-style:italic;">Vous avez un doute sur un diagnostic. Vous souhaitez vérifier si l'IA va valider votre hypothèse par défaut — ou si elle va vous challenger honnêtement. Patient de 45 ans, épisodes de déconnexion de 30 secondes, 3 fois par semaine depuis 2 mois.</p>
+        </div>
+
+        <!-- TASK -->
+        <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1.25rem;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-lt);margin-bottom:.6rem;">🎯 Ce que vous devez faire</div>
+          <p style="font-size:14px;color:var(--ink);line-height:1.65;">Testez les <strong>deux versions du prompt</strong> dans Claude.ai et observez la différence de réponse. Puis identifiez si la sycophancy était présente dans la réponse 1.</p>
+        </div>
+
+        <!-- PROMPT 1 -->
+        <div style="margin-bottom:1rem;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:.6rem;">Prompt 1 — Version sycophante (tester en premier)</div>
+          <div style="background:var(--red-lt);border:1px solid #F5C0C0;border-left:3px solid var(--red);border-radius:8px;padding:1rem 1.25rem;font-family:var(--font-mono);font-size:13px;line-height:1.65;color:var(--ink);margin-bottom:.5rem;">J'ai posé un diagnostic d'épilepsie focale chez ce patient de 45 ans qui présente des épisodes de déconnexion de 30 secondes, 3 fois par semaine, depuis 2 mois. C'est bien ça, non ?</div>
+          <button style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--red);background:none;border:none;cursor:pointer;padding:0;" onclick="showToast('📋 Prompt 1 copié !')">📋 Copier ce prompt</button>
+        </div>
+
+        <!-- PROMPT 2 -->
+        <div style="margin-bottom:1.5rem;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);margin-bottom:.6rem;">Prompt 2 — Version anti-sycophancy (tester ensuite)</div>
+          <div style="background:var(--teal-lt);border:1px solid #9FE1CB;border-left:3px solid var(--teal);border-radius:8px;padding:1rem 1.25rem;font-family:var(--font-mono);font-size:13px;line-height:1.65;color:var(--ink);margin-bottom:.5rem;">Joue le rôle d'un neurologue qui ne veut pas me flatter. Quels diagnostics alternatifs à l'épilepsie focale dois-je absolument éliminer avant de poser ce diagnostic ? Donne les arguments contre mon hypothèse.</div>
+          <button style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--teal);background:none;border:none;cursor:pointer;padding:0;" onclick="showToast('📋 Prompt 2 copié !')">📋 Copier ce prompt</button>
+        </div>
+
+        <!-- SUCCESS CRITERIA -->
+        <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1.25rem;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-lt);margin-bottom:.85rem;">✅ Critères de réussite</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:13.5px;color:var(--ink-md);line-height:1.5;">
+              <input type="checkbox" style="accent-color:var(--teal);margin-top:2px;flex-shrink:0;" onchange="checkProgress()">
+              Les réponses 1 et 2 sont notablement différentes
+            </label>
+            <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:13.5px;color:var(--ink-md);line-height:1.5;">
+              <input type="checkbox" style="accent-color:var(--teal);margin-top:2px;flex-shrink:0;" onchange="checkProgress()">
+              La version 2 mentionne syncope et/ou TIA (accident ischémique transitoire)
+            </label>
+            <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:13.5px;color:var(--ink-md);line-height:1.5;">
+              <input type="checkbox" style="accent-color:var(--teal);margin-top:2px;flex-shrink:0;" onchange="checkProgress()">
+              Vous avez identifié si la version 1 était sycophante ou non
+            </label>
+          </div>
+        </div>
+
+        <!-- BONUS -->
+        <div style="background:var(--gold-pale);border:1px solid rgba(196,154,60,.3);border-radius:var(--radius-lg);padding:1.25rem;margin-bottom:2rem;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);margin-bottom:.4rem;">🔥 Niveau +</div>
+          <div style="font-size:13.5px;color:var(--ink-md);line-height:1.6;">Demandez ensuite : <em>"Si je me trompais de diagnostic, quelles seraient les conséquences concrètes pour ce patient ?"</em></div>
+        </div>
+
+        <!-- ACTIONS -->
+        <div id="module-actions" style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <button class="btn-primary" id="btn-complete" style="opacity:.5;pointer-events:none;" onclick="completeExercise()">
+            ✓ Marquer comme complété
+          </button>
+          <button class="btn-outline" style="color:var(--navy);border-color:var(--rule);background:#fff;" onclick="showPage('dashboard')">
+            Retour au tableau de bord
+          </button>
+        </div>
+        <div id="completion-msg" style="display:none;margin-top:1.25rem;padding:1.25rem;background:var(--green-lt);border:1px solid var(--green);border-radius:var(--radius-lg);text-align:center;">
+          <div style="font-size:24px;margin-bottom:.4rem;">🎉</div>
+          <div style="font-size:15px;font-weight:600;color:var(--green-d);">Exercice complété !</div>
+          <div style="font-size:13px;color:var(--green);margin-top:4px;">Prochain : Ex.04 — Critique de compte-rendu</div>
+          <button class="btn-primary" style="margin-top:1rem;background:var(--green);box-shadow:none;" onclick="showPage('dashboard')">Continuer →</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     PAGE : QCM INTERACTIF
+════════════════════════════════════ -->
+<div class="page" id="page-qcm">
+  <div style="background:var(--navy);padding:3rem 3rem 2rem;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 30%,rgba(196,154,60,.1) 0%,transparent 60%);"></div>
+    <div style="max-width:800px;margin:0 auto;position:relative;z-index:2;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+        <button onclick="showPage('dashboard')" style="background:rgba(255,255,255,.1);border:none;color:rgba(255,255,255,.7);padding:.4rem .9rem;border-radius:999px;font-size:13px;cursor:pointer;">← Tableau de bord</button>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+        <div>
+          <div style="margin-bottom:.75rem;">
+          <img src="assets/logo-seal.png" alt="IAMED Academy" style="width:44px;height:44px;border-radius:9px;object-fit:cover;">
+        </div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--gold-lt);margin-bottom:.4rem;">Évaluation finale</div>
+          <h1 style="font-family:var(--font-display);font-size:28px;font-weight:700;color:#fff;line-height:1.2;">QCM — Prompt Engineering pour Médecins</h1>
+          <p style="font-size:13.5px;color:rgba(255,255,255,.55);margin-top:.4rem;">20 questions · Scénarios cliniques réels · Durée estimée : 12 minutes</p>
+        </div>
+        <div id="qcm-timer-box" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:1rem 1.5rem;text-align:center;min-width:100px;">
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:3px;">Temps restant</div>
+          <div id="qcm-timer" style="font-family:var(--font-display);font-size:28px;font-weight:700;color:#fff;line-height:1;">12:00</div>
+        </div>
+      </div>
+      <!-- Progress bar -->
+      <div style="margin-top:1.5rem;">
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.4);margin-bottom:6px;">
+          <span id="qcm-progress-label">Question 1 sur 20</span>
+          <span id="qcm-score-live">Score : 0 / 0</span>
+        </div>
+        <div style="height:5px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden;">
+          <div id="qcm-progress-bar" style="width:5%;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-lt));border-radius:3px;transition:width .4s;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QCM BODY -->
+  <div style="max-width:800px;margin:0 auto;padding:2.5rem 3rem;" id="qcm-question-area">
+    <!-- Question card injected by JS -->
+  </div>
+
+  <!-- RESULTS (hidden by default) -->
+  <div id="qcm-results" style="display:none;max-width:800px;margin:0 auto;padding:2.5rem 3rem;">
+    <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-xl);overflow:hidden;text-align:center;">
+      <div id="qcm-result-header" style="padding:3rem 2rem 2rem;">
+        <div id="qcm-result-icon" style="font-size:64px;margin-bottom:1rem;"></div>
+        <h2 id="qcm-result-title" style="font-family:var(--font-display);font-size:30px;font-weight:700;color:var(--navy);margin-bottom:.5rem;"></h2>
+        <p id="qcm-result-sub" style="font-size:15px;color:var(--ink-lt);"></p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);">
+        <div style="background:#fff;padding:1.5rem;text-align:center;">
+          <div id="qcm-score-num" style="font-family:var(--font-display);font-size:40px;font-weight:700;color:var(--navy);"></div>
+          <div style="font-size:12px;color:var(--ink-lt);margin-top:3px;">Score / 20</div>
+        </div>
+        <div style="background:#fff;padding:1.5rem;text-align:center;">
+          <div id="qcm-pct" style="font-family:var(--font-display);font-size:40px;font-weight:700;color:var(--navy);"></div>
+          <div style="font-size:12px;color:var(--ink-lt);margin-top:3px;">Pourcentage</div>
+        </div>
+        <div style="background:#fff;padding:1.5rem;text-align:center;">
+          <div id="qcm-time-used" style="font-family:var(--font-display);font-size:40px;font-weight:700;color:var(--navy);"></div>
+          <div style="font-size:12px;color:var(--ink-lt);margin-top:3px;">Temps utilisé</div>
+        </div>
+      </div>
+      <!-- Review section -->
+      <div style="padding:1.5rem 2rem;text-align:left;border-top:1px solid var(--rule);">
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-lt);margin-bottom:1rem;">Révision des réponses</div>
+        <div id="qcm-review" style="display:flex;flex-direction:column;gap:.6rem;"></div>
+      </div>
+      <div style="padding:1.5rem 2rem;border-top:1px solid var(--rule);display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <button id="qcm-cert-btn" class="btn-primary" onclick="showPage('certificat')" style="display:none;">🏆 Générer mon attestation</button>
+        <button class="btn-outline" style="color:var(--navy);border-color:var(--rule);background:#fff;" onclick="resetQCM()">🔄 Recommencer le QCM</button>
+        <button class="btn-outline" style="color:var(--navy);border-color:var(--rule);background:#fff;" onclick="showPage('exercices')">📋 Voir mes exercices</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     PAGE : ESPACE EXERCICES
+════════════════════════════════════ -->
+<div class="page" id="page-exercices">
+  <div style="background:var(--navy);padding:3rem 3rem 2.5rem;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 30%,rgba(14,138,107,.1) 0%,transparent 60%);"></div>
+    <div style="max-width:1100px;margin:0 auto;position:relative;z-index:2;">
+      <button onclick="showPage('dashboard')" style="background:rgba(255,255,255,.1);border:none;color:rgba(255,255,255,.7);padding:.4rem .9rem;border-radius:999px;font-size:13px;cursor:pointer;margin-bottom:1rem;display:inline-block;">← Tableau de bord</button>
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+        <div>
+          <div style="margin-bottom:.75rem;">
+          <img src="assets/logo-seal.png" alt="IAMED Academy" style="width:44px;height:44px;border-radius:9px;object-fit:cover;">
+        </div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--gold-lt);margin-bottom:.4rem;">Espace de travail</div>
+          <h1 style="font-family:var(--font-display);font-size:28px;font-weight:700;color:#fff;">Mes exercices pratiques</h1>
+          <p style="font-size:13.5px;color:rgba(255,255,255,.55);margin-top:.4rem;">Rédigez, sauvegardez et soumettez vos réponses — elles sont conservées dans votre navigateur.</p>
+        </div>
+        <div style="display:flex;gap:.75rem;align-items:center;">
+          <div id="ex-saved-indicator" style="font-size:12px;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:5px;">
+            <span id="ex-saved-dot" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.2);display:inline-block;"></span>
+            <span id="ex-saved-text">Non sauvegardé</span>
+          </div>
+          <button onclick="saveAllExercises()" class="btn-gold-nav">💾 Tout sauvegarder</button>
+        </div>
+      </div>
+      <!-- BLOC TABS -->
+      <div style="display:flex;gap:6px;margin-top:1.5rem;overflow-x:auto;padding-bottom:2px;">
+        <button class="ex-bloc-tab active" onclick="switchBloc(0,this)" style="padding:.45rem 1.1rem;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#fff;font-size:13px;cursor:pointer;white-space:nowrap;font-family:var(--font-body);">Bloc 1 — Trouver l'info</button>
+        <button class="ex-bloc-tab" onclick="switchBloc(1,this)" style="padding:.45rem 1.1rem;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:rgba(255,255,255,.6);font-size:13px;cursor:pointer;white-space:nowrap;font-family:var(--font-body);">Bloc 2 — Partenaire clinique</button>
+        <button class="ex-bloc-tab" onclick="switchBloc(2,this)" style="padding:.45rem 1.1rem;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:rgba(255,255,255,.6);font-size:13px;cursor:pointer;white-space:nowrap;font-family:var(--font-body);">Bloc 3 — Outils sans code</button>
+        <button class="ex-bloc-tab" onclick="switchBloc(3,this)" style="padding:.45rem 1.1rem;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:rgba(255,255,255,.6);font-size:13px;cursor:pointer;white-space:nowrap;font-family:var(--font-body);">Bloc 4 — Intégration</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXERCISES GRID -->
+  <div style="max-width:1100px;margin:0 auto;padding:2.5rem 3rem;" id="ex-grid">
+    <!-- Injected by JS -->
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     PAGE : CERTIFICAT
+════════════════════════════════════ -->
+<div class="page" id="page-certificat">
+  <div style="background:var(--navy);padding:2.5rem 3rem;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 30%,rgba(196,154,60,.15) 0%,transparent 60%);"></div>
+    <div style="max-width:900px;margin:0 auto;position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+      <div>
+        <button onclick="showPage('dashboard')" style="background:rgba(255,255,255,.1);border:none;color:rgba(255,255,255,.7);padding:.4rem .9rem;border-radius:999px;font-size:13px;cursor:pointer;margin-bottom:.75rem;display:inline-block;">← Tableau de bord</button>
+        <h1 style="font-family:var(--font-display);font-size:24px;font-weight:700;color:#fff;">Votre attestation de complétion</h1>
+        <p style="font-size:13px;color:rgba(255,255,255,.5);margin-top:.3rem;">Téléchargez ou imprimez votre attestation — format A4, prêt à l'emploi.</p>
+      </div>
+      <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+        <button onclick="printCert()" class="btn-outline" style="color:#fff;border-color:rgba(255,255,255,.3);">🖨️ Imprimer</button>
+        <button onclick="downloadCert()" class="btn-gold-nav">⬇ Télécharger l'attestation</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERT PREVIEW -->
+  <div style="background:var(--gray-50);padding:3rem;display:flex;justify-content:center;">
+    <div id="cert-preview" style="width:794px;background:#fff;box-shadow:0 8px 48px rgba(0,0,0,.15);border-radius:4px;overflow:hidden;position:relative;">
+
+      <!-- TOP GOLD BAR -->
+      <div style="height:8px;background:linear-gradient(90deg,#0B1F35 0%,#B8882E 40%,#D4A84B 60%,#0B1F35 100%);"></div>
+
+      <!-- HEADER BAND -->
+      <div style="background:var(--navy);padding:2.5rem 3rem 2rem;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;right:0;width:200px;height:100%;background:rgba(196,154,60,.07);clip-path:polygon(30% 0%,100% 0%,100% 100%,0% 100%);"></div>
+        <div style="position:absolute;top:-20px;right:20px;width:120px;height:120px;border-radius:50%;background:rgba(196,154,60,.05);"></div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.5rem;position:relative;z-index:2;">
+          <img src="assets/logo-seal.png" alt="IAMED Academy" style="width:48px;height:48px;border-radius:10px;object-fit:cover;">
+          <div>
+            <div style="font-family:var(--font-display);font-size:18px;font-weight:700;color:#fff;letter-spacing:-.01em;">IAMED <span style="color:var(--gold-lt);">Academy</span></div>
+            <div style="font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;">Formation médicale continue · IA en santé</div>
+          </div>
+        </div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:.5rem;position:relative;z-index:2;">Attestation de complétion</div>
+        <h2 style="font-family:var(--font-display);font-size:26px;font-weight:700;color:#fff;position:relative;z-index:2;margin:0;">Certifie que</h2>
+      </div>
+
+      <!-- RECIPIENT -->
+      <div style="padding:2rem 3rem;border-bottom:1px solid var(--rule);text-align:center;background:linear-gradient(180deg,#fafaf6 0%,#fff 100%);">
+        <div id="cert-name" style="font-family:var(--font-display);font-size:36px;font-weight:700;color:var(--navy);letter-spacing:-.01em;margin-bottom:.3rem;font-style:italic;">Dr Sophie Martin</div>
+        <div id="cert-profession" style="font-size:14px;color:var(--ink-lt);">Cardiologue · CHU de Lyon</div>
+      </div>
+
+      <!-- COURSE INFO -->
+      <div style="padding:2rem 3rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;">
+        <div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-deep);margin-bottom:.4rem;">a complété avec succès la formation</div>
+          <div style="font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--navy);margin-bottom:.3rem;line-height:1.3;">Prompt Engineering pour Médecins</div>
+          <div style="font-size:13px;color:var(--ink-lt);">Hôpital universitaire · Niveau débutant · 3 à 4 heures</div>
+        </div>
+        <div style="text-align:center;background:var(--gold-pale);border:1px solid rgba(196,154,60,.3);border-radius:12px;padding:1.1rem 1.5rem;min-width:110px;">
+          <div id="cert-score-display" style="font-family:var(--font-display);font-size:34px;font-weight:700;color:var(--navy);line-height:1;">—</div>
+          <div style="font-size:11px;color:var(--amber);margin-top:3px;">Score QCM</div>
+        </div>
+      </div>
+
+      <!-- COMPETENCES -->
+      <div style="padding:0 3rem 2rem;">
+        <div style="background:var(--cream);border-radius:10px;padding:1.25rem 1.5rem;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-lt);margin-bottom:.85rem;">Compétences validées</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+            <div style="font-size:12px;color:var(--ink-md);display:flex;gap:7px;"><span style="color:var(--teal);">✓</span>3 modes d'interrogation IA (intégré, web, deep)</div>
+            <div style="font-size:12px;color:var(--ink-md);display:flex;gap:7px;"><span style="color:var(--teal);">✓</span>Grille feux tricolores — évaluation des sources</div>
+            <div style="font-size:12px;color:var(--ink-md);display:flex;gap:7px;"><span style="color:var(--teal);">✓</span>Cadre PACTE — prompts médicaux complexes</div>
+            <div style="font-size:12px;color:var(--ink-md);display:flex;gap:7px;"><span style="color:var(--teal);">✓</span>Détection et correction de la sycophancy</div>
+            <div style="font-size:12px;color:var(--ink-md);display:flex;gap:7px;"><span style="color:var(--teal);">✓</span>Analyse de données cliniques par IA</div>
+            <div style="font-size:12px;color:var(--ink-md);display:flex;gap:7px;"><span style="color:var(--teal);">✓</span>Création d'outils médicaux sans programmation</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div style="padding:1.5rem 3rem;border-top:1px solid var(--rule);display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;">
+        <div>
+          <div style="font-size:11px;color:var(--ink-lt);margin-bottom:3px;">Date de délivrance</div>
+          <div id="cert-date" style="font-size:13px;font-weight:600;color:var(--ink);">26 mai 2026</div>
+          <div style="margin-top:.75rem;">
+            <div style="font-size:11px;color:var(--ink-lt);margin-bottom:3px;">Code de vérification</div>
+            <div id="cert-code" style="font-family:var(--font-mono);font-size:12px;color:var(--navy);background:var(--cream);padding:3px 8px;border-radius:4px;border:1px solid var(--rule);display:inline-block;letter-spacing:.08em;">IAMED-2026-XXXX</div>
+          </div>
+        </div>
+        <!-- SIGNATURE -->
+        <div style="text-align:center;">
+          <div style="font-family:var(--font-display);font-size:20px;font-style:italic;color:var(--navy);margin-bottom:4px;">Dr R. Pédagogique</div>
+          <div style="width:120px;height:1px;background:var(--rule);margin:0 auto 4px;"></div>
+          <div style="font-size:10px;color:var(--ink-lt);">Directeur de la formation</div>
+          <div style="font-size:10px;color:var(--ink-lt);">IAMED Academy</div>
+        </div>
+        <!-- SEAL -->
+        <div style="width:90px;height:90px;border-radius:50%;border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;background:#fff;overflow:hidden;padding:5px;flex-shrink:0;">
+          <img src="assets/logo-banner.png" alt="Sceau IAMED" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+      </div>
+      <!-- BOTTOM GOLD BAR -->
+      <div style="height:5px;background:linear-gradient(90deg,var(--gold) 0%,var(--gold-lt) 50%,transparent 100%);"></div>
+    </div>
+  </div>
+
+  <!-- PERSONALIZATION FORM -->
+  <div style="max-width:900px;margin:0 auto;padding:2rem 3rem 3rem;">
+    <div style="background:#fff;border:1px solid var(--rule);border-radius:var(--radius-lg);padding:1.5rem;">
+      <h3 style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:1rem;">Personnaliser l'attestation</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div class="form-field" style="margin-bottom:0;">
+          <label class="form-label">Prénom &amp; Nom complet</label>
+          <input class="form-input" id="cert-name-input" type="text" placeholder="Dr Prénom Nom" value="Dr Sophie Martin" oninput="updateCert()">
+        </div>
+        <div class="form-field" style="margin-bottom:0;">
+          <label class="form-label">Profession &amp; Établissement</label>
+          <input class="form-input" id="cert-job-input" type="text" placeholder="Spécialité · Établissement" value="Cardiologue · CHU de Lyon" oninput="updateCert()">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <span class="toast-icon" id="toast-icon">✅</span>
+  <span id="toast-msg">Message</span>
+</div>
+
+  <!-- App JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
